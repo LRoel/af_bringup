@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classserial__af_1_1_encoder">
+<title>serial_af::Encoder class Reference</title>
+<para>Inheritance diagram for serial_af::Encoder</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classserial__af_1_1_encoder__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for serial_af::Encoder</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classserial__af_1_1_encoder__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>left_encoder_val<para><emphasis>左里程计值</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>right_encoder_val<para><emphasis>右里程计值</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>encoder_time<para><emphasis>同步里程计时间</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classserial__af_1_1_encoder_1ae52648d6c30aed421c3ba144646798b9">__init__</link> (
+self )<para><emphasis>构造函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classserial__af_1_1_encoder_1a6115398fbf3ad6bd333d3bddc427e97e">plot</link> (
+self )<para><emphasis>输出</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>类用来存储里程计信息 </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 220 of file serial_af.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>serial_af.py</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classserial__af_1_1_encoder_1ae52648d6c30aed421c3ba144646798b9">
+                <title>def serial_af.Encoder.__init__ (self)</title> <emphasis>构造函数</emphasis>
+                
+            </section>
+            <section xml:id="classserial__af_1_1_encoder_1a6115398fbf3ad6bd333d3bddc427e97e">
+                <title>def serial_af.Encoder.plot (self)</title> <emphasis>输出</emphasis>
+                
+            </section>
+</section>

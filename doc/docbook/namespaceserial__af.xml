@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespaceserial__af">
+<title>serial_af</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classserial__af_1_1_encoder">serial_af::Encoder</link></para>
+<para><emphasis>类用来存储里程计信息</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classserial__af_1_1_fuse___g_p_s___odom">serial_af::Fuse_GPS_Odom</link></para>
+<para><emphasis>class Fuse_GPS_Odom 用来存储GPS和Encoder的信息</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classserial__af_1_1_g_p_s">serial_af::GPS</link></para>
+<para><emphasis>存储GPS信息的类</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespaceserial__af_1a193ccba55b824330c7d21685b14a6284">crc_novetal</link><para><emphasis>crc32校验程序(GPS)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespaceserial__af_1ad9b17c1f4492249eb921e7d5ec2a50ec">mutex</link><para><emphasis>线程锁</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespaceserial__af_1a35540907277fe0c8e8c3abb88c3e5186">fuse_gps_odom</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespaceserial__af_1ae7aa8b1dc138cd3376ea6f83f4e47c24">sound_range</link><para><emphasis>超声波模拟激光输出类</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="namespaceserial__af_1a48355ec276db91ffbf4665ab2c216d76">sound_seq</link><para><emphasis>超声波输出计数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespaceserial__af_1a5187c1672dbeadeffa2db70fc33466fe">sound_range_init</link> (
+)<para><emphasis>超声波数据初始化</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespaceserial__af_1aabbd1e43de1cd4d1a46a61a1cb743e12">range_pub</link> (
+range_msg )<para><emphasis>range_pub range的激光输出函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespaceserial__af_1aa88a0e49ebc995801b7957de5f840495">serial_process</link> (
+port , baudrate , timeout )<para><emphasis>serial_process 串口线程</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespaceserial__af_1af84db65a10932c888008e984b4bf980e">main</link> (
+)<para><emphasis>main函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

@@ -1,0 +1,58 @@
+\hypertarget{fuse___g___a__dox_8py}{}\section{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+py File Reference}
+\label{fuse___g___a__dox_8py}\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+py@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+py}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfuse___g___a__dox_1_1_a_m_c_l__unit}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em A\+M\+C\+L存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_odom__unit}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em 里程计数据存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em G\+P\+S数据存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_s_e_l_e_c_t_e_d}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+S\+E\+L\+E\+C\+T\+ED}
+\begin{DoxyCompactList}\small\item\em 筛选结果类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacefuse___g___a__dox}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefuse___g___a__dox_a74ca52501813c654c46db737d87fd009}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+matrix\+\_\+from\+\_\+theta} (theta)
+\begin{DoxyCompactList}\small\item\em 角度生成旋转矩阵(2x2) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_a3fb8553ee2aa4421c0b7e1931a0e06d3}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+theta\+\_\+from\+\_\+matrix} (R)
+\begin{DoxyCompactList}\small\item\em 旋转矩阵(2x2)转成角度 \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+send\+Transform} ()
+\begin{DoxyCompactList}\small\item\em 发送topic \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_afffb200826c683d789ba1613b24f12ff}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tran\+\_\+mat44} (trans)
+\begin{DoxyCompactList}\small\item\em 将ros格式中的\+Transform数据转为矩阵(4\+X4) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_a223efed7f7635370a23a69ae03068b56}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tran\+\_\+theta\+\_\+T} (trans)
+\begin{DoxyCompactList}\small\item\em 将ros格式中的\+Transform数据转为矩阵(2\+X2) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+normalization} (a, b)
+\begin{DoxyCompactList}\small\item\em 归一化 \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+make\+\_\+choice} ()
+\begin{DoxyCompactList}\small\item\em 筛选函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacefuse___g___a__dox_a7926ebd96da06b98fb5456a8ad2b91fe}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+M\+A\+X\+\_\+\+S\+TD} = 999999999
+\begin{DoxyCompactList}\small\item\em 最大的标准差 \end{DoxyCompactList}\item 
+\hyperlink{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tf\+Buffer} = tf2\+\_\+ros.\+Buffer()
+\item 
+\hyperlink{namespacefuse___g___a__dox_af9e2cb2b46ad831441999e98b719ddac}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+listener} = tf2\+\_\+ros.\+Transform\+Listener(tf\+Buffer)
+\item 
+\hyperlink{namespacefuse___g___a__dox_a16622f55cce6126a0d148d928851a0bc}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+amcl\+\_\+pose} = A\+M\+C\+L\+\_\+unit()
+\item 
+\hyperlink{namespacefuse___g___a__dox_a09f59f9373060068bdb3831fa1af70d8}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+gps\+\_\+pose} = G\+P\+S\+\_\+unit()
+\item 
+\hyperlink{namespacefuse___g___a__dox_abfd9a9f651abe0cd57872120a5fc770d}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+odom\+\_\+pose} = Odom\+\_\+unit()
+\item 
+\hyperlink{namespacefuse___g___a__dox_a3df8ccaf4e9766e9c97abe02f7b8e9c6}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+out\+\_\+pose} = S\+E\+L\+E\+C\+T\+ED()
+\item 
+\hyperlink{namespacefuse___g___a__dox_af5a011d160dec3e582508223494e25b1}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+pub} = rospy.\+Publisher(\textquotesingle{}/fuse/tf\textquotesingle{}, Fuse\+\_\+tf, queue\+\_\+size=100)
+\item 
+\hyperlink{namespacefuse___g___a__dox_a8259a50c04254f445d14a4f3e5af45de}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+t2} = threading.\+Thread(target=send\+Transform)
+\item 
+\hyperlink{namespacefuse___g___a__dox_a34cdbd8e1cd88bd38360293158d2418b}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+t1} = threading.\+Thread(target=make\+\_\+choice)
+\end{DoxyCompactItemize}

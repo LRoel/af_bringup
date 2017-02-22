@@ -1,0 +1,673 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import rospy
+import tf
+import threading
+import numpy as np
+import numpy.linalg as la
+import math
+import time
+import tf2_ros
+
+from std_srvs.srv import Empty
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseWithCovarianceStamped
+from sensor_msgs.msg import LaserScan
+from geometry_msgs.msg import PoseWithCovariance
+from geometry_msgs.msg import TransformStamped
+from af_msgs.msg import Gnss_Odom_lyz
+from af_msgs.msg import Fuse_tf
+from af_bringup.msg import Robot_encode
+from std_msgs.msg import Bool
+
+from tf import transformations
+from tf.transformations import quaternion_from_euler
+from tf.transformations import euler_from_quaternion
+import tf.transformations as tft
+
+
+### 最大的标准差
+MAX_STD = 999999999
+### 机器人是否运动标志
+flag_robot_move = 0
+### 判断机器人是否运动的速度限制
+STATIC_LIMIT_LINEAR = 0.05
+### 判断机器人是否运动的角度限制
+STATIC_LIMIT_ANGULAR = 0.05
+
+
+## @brief 归一化
+#
+#
+# @param		z	角度输入
+#
+# @return
+#        角度输出(0~pi)
+#
+#
+def normalize(z):
+
+    return math.atan2(math.sin(z), math.cos(z))
+
+
+## @brief 角度差值
+#
+#
+# @param		a	输入角度
+# @param		b	输入角度
+#
+# @return
+#        角度差值
+#
+#
+def angle_diff(a, b):
+
+    a = normalize(a)
+    b = normalize(b)
+    d1 = a - b
+    d2 = 2 * math.pi - math.fabs(d1)
+    if d1 > 0:
+        d2 *= -1.0
+    if math.fabs(d1) < math.fabs(d2):
+        return d1
+    else:
+        return d2
+
+
+## @brief 角度生成旋转矩阵(2x2)
+#
+#
+# @param		theta	输入角度
+#
+# @return
+#        输出旋转矩阵
+#
+#
+def matrix_from_theta(theta):
+
+    return np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])
+
+
+## @brief 旋转矩阵(2x2)转成角度
+#
+#
+# @param		R	输入旋转矩阵
+#
+# @return
+#        输出角度值
+#
+#
+def theta_from_matrix(R):
+
+    ## @var _R_12
+    # @hideinitializer
+    # @protected
+    _R_12 = R[0, 1]
+    ## @var _R_22
+    # @hideinitializer
+    # @protected
+    _R_22 = R[1, 1]
+    if -0.001 < _R_22 < 0.001 and _R_12 > 0:
+        theta = math.pi / 2
+    elif -0.001 < _R_22 < 0.001 and _R_12 < 0:
+        theta = math.pi / 2
+    elif 0.001 <= _R_22 and _R_12 > 0:
+        theta = math.atan(_R_12 / _R_22)
+    elif 0.001 <= _R_22 and _R_12 < 0:
+        theta = math.atan(_R_12 / _R_22)
+    elif _R_22 <= -0.001 and _R_12 > 0:
+        theta = math.atan(_R_12 / _R_22) + math.pi
+    elif _R_22 <= -0.001 and _R_12 < 0:
+        theta = math.atan(_R_12 / _R_22) - math.pi
+    return theta
+
+
+## @brief AMCL存储类
+#
+#
+#
+#
+#
+class AMCL_unit:
+
+    ## @property		x
+    # x
+
+    ## @property		x_std
+    # x标准差
+
+    ## @property		y
+    # y
+
+    ## @property		y_std
+    # y标准差
+
+    ## @property		theta
+    # 角度
+
+    ## @property		theta_std
+    # 角度标准差
+
+    ## @property		_theta_base
+    # 累计角度
+
+    ## @property		_x_base
+    # 累计x
+
+    ## @property		_y_base
+    # 累计y
+
+
+    ## @brief 构造函数
+    def __init__(self):
+        self.x = 0
+        self.x_std = MAX_STD
+        self.y = 0
+        self.y_std = MAX_STD
+        self.theta = 0
+        self.theta_std = MAX_STD
+        self._theta_base = 0
+        self._x_base = 0
+        self._y_base = 0
+
+    ## @brief 里程计更新
+    #
+    #
+    # @param		odom_msg	ros里程计输入
+    #
+    #
+    # @sa		_pos	位置矩阵
+    # @sa		_pose_base	位置基准矩阵
+    # @sa		_pose_update	坐标系变换
+    # @sa		_quat	四元数
+    # @sa		flag_robot_move	机器人运动标志
+    #
+    #
+    def update(self, odom_msg):
+
+        global flag_robot_move
+        odom_msg = Odometry()
+        ## @var _pos
+        # @hideinitializer
+        # @protected
+        _pos = np.array([[odom_msg.pose.pose.position.x], [odom_msg.pose.pose.position.y]])
+        odom_pose.x = _pos[0, 0]
+        odom_pose.y = _pos[1, 0]
+        ## @var _pos_base
+        # @hideinitializer
+        # @protected
+        _pos_base = np.array([[self._x_base], [self._y_base]], dtype=float)
+        ## @var _quat
+        # @hideinitializer
+        # @protected
+        _quat = [odom_msg.pose.pose.orientation.x, odom_msg.pose.pose.orientation.y, odom_msg.pose.pose.orientation.z,
+                 odom_msg.pose.pose.orientation.w]
+        ## @var _theta
+        # @hideinitializer
+        # @protected
+        _theta = tft.euler_from_quaternion(_quat)[2]
+        ## @var _pos_updated
+        # @hideinitializer
+        # @protected
+        _pos_updated = np.dot(matrix_from_theta(self._theta_base), _pos) + _pos_base
+        odom_pose.theta = _theta
+        self.x = _pos_updated[0, 0]
+        self.y = _pos_updated[1, 0]
+        self.theta = _theta + self._theta_base
+        out_pose.set_odom(odom_pose.x, odom_pose.y, odom_pose.theta)
+
+        if odom_msg.twist.twist.linear.x ** 2 + odom_msg.twist.twist.linear.y ** 2 <= STATIC_LIMIT_LINEAR ** 2 and \
+                math.fabs(odom_msg.twist.twist.angular.z) <= STATIC_LIMIT_ANGULAR:
+            flag_robot_move = 0
+        else:
+            flag_robot_move = 1
+        # print "updated"
+        # self.output()
+
+    ## @brief AMCL修正输入
+    #
+    #        将AMCL修正输入的map->odom和里程计输入融合生成实时的AMCL输出值(机器人在地图上的激光定位)
+    #
+    #
+    # @param		odom_map_msg	AMCL的输入的map->odom
+    #
+    #
+    def fix(self, odom_map_msg):
+
+        # print "fixed"
+        ## @var _quat
+        # @hideinitializer
+        # @protected
+        _quat = [odom_map_msg.pose.pose.orientation.x, odom_map_msg.pose.pose.orientation.y, odom_map_msg.pose.pose.orientation.z,
+                 odom_map_msg.pose.pose.orientation.w]
+        self._theta_base = tft.euler_from_quaternion(_quat)[2]
+        self._x_base = odom_map_msg.pose.pose.position.x
+        self._y_base = odom_map_msg.pose.pose.position.y
+        self.x_std = math.sqrt(odom_map_msg.pose.covariance[0])
+        self.y_std = math.sqrt(odom_map_msg.pose.covariance[7])
+        self.theta_std = math.sqrt(odom_map_msg.pose.covariance[35])
+
+    ## @brief 将AMCL输出结果置为不可信
+    def lock(self):
+        self.x_std = MAX_STD
+        self.y_std = MAX_STD
+        self.theta_std = MAX_STD
+
+    ## @brief 输出
+    def output(self):
+        print "x: ", self.x, "| y: ", self.y, "| theta: ", self.theta
+        print "x_std: ", self.x_std, "| y_std: ", self.y_std, "| theta_std: ", self.theta_std
+
+
+## @brief 里程计数据存储类
+#
+#
+#
+#
+class Odom_unit:
+
+    ## @property		x
+    # x
+
+    ## @property		x_std
+    # x标准差
+
+    ## @property		y
+    # y
+
+    ## @property		y_std
+    # y标准差
+
+    ## @property		theta
+    # 角度
+
+    ## @property		theta_std
+    # 角度标准差
+
+    ## @brief 构造函数
+    def __init__(self):
+        self.x = 0
+        self.x_std = MAX_STD
+        self.y = 0
+        self.y_std = MAX_STD
+        self.theta = 0
+        self.theta_std = MAX_STD
+
+    ## @brief 输出
+    def output(self):
+        print "x: ", self.x, "| y: ", self.y, "| theta: ", self.theta
+        print "x_std: ", self.x_std, "| y_std: ", self.y_std, "| theta_std: ", self.theta_std
+
+
+## @brief GPS数据存储类
+#
+#
+#
+#
+class GPS_unit:
+
+    ## @property		x
+    # x
+
+    ## @property		x_std
+    # x标准差
+
+    ## @property		y
+    # y
+
+    ## @property		y_std
+    # y标准差
+
+    ## @property		theta
+    # 角度
+
+    ## @property		theta_std
+    # 角度标准差
+
+    ## @brief 构造函数
+    def __init__(self):
+        self.x = 0
+        self.x_std = MAX_STD
+        self.y = 0
+        self.y_std = MAX_STD
+        self.theta = 0
+        self.theta_std = MAX_STD
+
+    ## @brief GPS数据更新函数
+    #
+    #
+    # @param		gps_msg	GPS数据输入
+    #
+    #
+    def update(self, gps_msg):
+        self.x = gps_msg.X
+        self.x_std = gps_msg.X_std
+        self.y = gps_msg.Y
+        self.y_std = gps_msg.Y_std
+        self.theta = gps_msg.Hdg
+        self.theta_std = gps_msg.Hdg_std
+
+    ## @brief 将GPS输出结果置为不可信
+    def lock(self):
+        self.x_std = MAX_STD
+        self.y_std = MAX_STD
+        self.theta_std = MAX_STD
+
+    ## @brief 输出
+    def output(self):
+        print "x: ", self.x, "| y: ", self.y, "| theta: ", self.theta
+        print "x_std: ", self.x_std, "| y_std: ", self.y_std, "| theta_std: ", self.theta_std
+
+
+## @brief 筛选结果类
+#
+#
+#
+#
+class SELECTED:
+
+    ## @property		x
+    # x
+
+    ## @property		x_std
+    # x标准差
+
+    ## @property		y
+    # y
+
+    ## @property		y_std
+    # y标准差
+
+    ## @property		theta
+    # 角度
+
+    ## @property		theta_std
+    # 角度标准差
+
+    #        choice:
+    # @code
+
+    #            {0: "GPS", 1: "AMCL", 2: "NONE"}
+
+    ## @property		fuse_tf
+    # ros输出格式
+
+    ## @brief 构造函数
+    def __init__(self):
+        self.choice = {0: "GPS", 1: "AMCL", 2: "NONE"}
+        self.x = 0
+        self.x_choice = self.choice[2]
+        self.y = 0
+        self.y_choice = self.choice[2]
+        self.theta = 0
+        self.theta_choice = self.choice[2]
+        self.fuse_tf = Fuse_tf()
+        self.fuse_tf.map_x = 0
+        self.fuse_tf.map_y = 0
+        self.fuse_tf.map_theta = 0
+        self.fuse_tf.odom_x = 0
+        self.fuse_tf.odom_y = 0
+        self.fuse_tf.odom_theta = 0
+
+    ## @brief 将选则的最终结果数据放在输出中
+    def set_map(self, x, y, theta):
+        self.fuse_tf.map_x = x
+        self.fuse_tf.map_y = y
+        self.fuse_tf.map_theta = theta
+
+    ## @brief 将里程计数据放在输出中
+    def set_odom(self,x, y, theta):
+        self.fuse_tf.odom_x = x
+        self.fuse_tf.odom_y = y
+        self.fuse_tf.odom_theta = theta
+
+    ## @brief 输出
+    def output(self):
+        print "x: ", self.x, "| y: ", self.y, "| theta: ", self.theta
+        print "x_choice: ", self.x_choice, "| y_choice: ", self.y_choice, "| theta_choice: ", self.theta_choice
+
+
+## @brief 发送TF(topic)
+#
+#
+# @param		out_pose	ros输出格式数据
+#
+#
+def sendTransform(out_pose):
+
+    pub.publish(out_pose.fuse_tf)
+
+
+## @brief 将ros格式中的Transform数据转为矩阵(4X4)
+#
+#
+# @param		trans	ros格式Transform数据
+#
+#
+def tran_mat44(trans):
+
+    trans_xyz = [trans.transform.translation.x, trans.transform.translation.y, 0]
+    trans_quat = [0, 0, trans.transform.rotation.z,
+                  trans.transform.rotation.w]
+    mat44 = np.dot(tft.translation_matrix(trans_xyz), tft.quaternion_matrix(trans_quat))
+    return mat44
+
+
+## @brief 将ros格式中的Transform数据转为矩阵(2X2)
+#
+#
+# @param		trans	ros格式Transform数据
+#
+#
+def tran_theta_T(trans):
+
+    ## @var _quat
+    # @hideinitializer
+    # @protected
+    _quat = [trans.transform.rotation.x, trans.transform.rotation.y,
+             trans.transform.rotation.z,
+             trans.transform.rotation.w]
+    ## @var _theta
+    # @hideinitializer
+    # @protected
+    _theta = tft.euler_from_quaternion(_quat)[2]
+    ## @var _T
+    # @hideinitializer
+    # @protected
+    _T = np.array([[trans.transform.translation.x], [trans.transform.translation.y]])
+    return _theta, _T
+
+
+## @brief 筛选函数
+def make_choice():
+    rate = rospy.Rate(10)
+    while not rospy.is_shutdown():
+        out_pose.x = amcl_output.x
+        out_pose.y = amcl_output.y
+        out_pose.theta = amcl_output.theta
+        out_pose.set_map(out_pose.x, out_pose.y, out_pose.theta)
+        # sendRVIZ()
+        sendTransform(out_pose)
+        # amcl_pose.lock()
+        # gps_pose.lock()
+
+        rate.sleep()
+
+
+## @brief  AMCL初始化函数
+#
+#
+# @param		x_std	x方向方差
+# @param		y_std	y方向方差
+# @param		theta_std	角度房车
+#
+#
+def amcl_initial_update(x_std=1, y_std=1, theta_std=1):
+
+    rate = rospy.Rate(10)
+    while not rospy.is_shutdown():
+        try:
+            trans = tfBuffer.lookup_transform('map', 'base_footprint', rospy.Time())
+        except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
+            rate.sleep()
+            continue
+
+        global pub_amcl
+        amcl_init_pose.header.stamp = rospy.Time.now()
+        amcl_init_pose.header.frame_id = "map"
+        amcl_init_pose.pose.pose.position.x = trans.transform.translation.x
+        amcl_init_pose.pose.pose.position.y = trans.transform.translation.y
+        amcl_init_pose.pose.pose.position.z = trans.transform.translation.z
+        amcl_init_pose.pose.pose.orientation.x = trans.transform.rotation.x
+        amcl_init_pose.pose.pose.orientation.y = trans.transform.rotation.y
+        amcl_init_pose.pose.pose.orientation.z = trans.transform.rotation.z
+        amcl_init_pose.pose.pose.orientation.w = trans.transform.rotation.w
+        amcl_init_pose.pose.covariance = [0.0] * 36
+        amcl_init_pose.pose.covariance[0] = x_std ** 2
+        amcl_init_pose.pose.covariance[7] = y_std ** 2
+        amcl_init_pose.pose.covariance[35] = theta_std ** 2
+        pub_amcl.publish(amcl_init_pose)
+        break
+        # print "pub amcl ok" + str(input_yaw)
+
+
+## @brief AMCL 初始化回调函数
+#
+#
+# @param		msg	ros回调数据
+#
+#
+def amcl_initial_callback(msg):
+
+    # msg = PoseWithCovarianceStamped()
+    global amcl_output
+    print "  "
+    # amcl_output.x = msg.pose.pose.position.x
+    # amcl_output.y = msg.pose.pose.position.y
+    # _quat = [msg.pose.pose.orientation.x, msg.pose.pose.orientation.y,
+    #          msg.pose.pose.orientation.z,
+    #          msg.pose.pose.orientation.w]
+    # amcl_output.theta = tft.euler_from_quaternion(_quat)[2]
+
+
+## @brief AMCL全局撒粒子
+def amcl_global_update():
+    rospy.wait_for_service('global_localization')
+    try:
+        global_update = rospy.ServiceProxy('global_localization', Empty)
+        global_update()
+    except rospy.ServiceException, e:
+        print "Service call failed: %s" % e
+
+
+## @brief AMCL未运动状态下粒子更新
+def amcl_nomotion_update():
+    rospy.wait_for_service('request_nomotion_update')
+    try:
+        nomotion_update = rospy.ServiceProxy('request_nomotion_update', Empty)
+        nomotion_update()
+    except rospy.ServiceException, e:
+        print "Service call failed: %s" % e
+
+
+## @brief AMCL恢复状态过程
+def amcl_recovery():
+    global amcl_pose
+    if flag_robot_move:
+        t = 0
+        while t < 15:
+            time.sleep(1)
+            print amcl_pose.x_std, amcl_pose.y_std
+            if amcl_pose.x_std > 0.5 or amcl_pose.y_std > 0.5:
+                t += 1
+            else:
+                return True
+        return False
+    else:
+        t = 0
+        while t < 15:
+            time.sleep(1)
+            amcl_nomotion_update()
+            print amcl_pose.x_std, amcl_pose.y_std
+            if amcl_pose.x_std > 0.5 or amcl_pose.y_std > 0.5:
+                t += 1
+            else:
+                return True
+        return False
+
+
+## @brief AMCL线程
+#
+#    包括AMCL位置纠正,AMCL位置正确度判断和AMCL自恢复
+#
+#
+def amcl_process():
+
+    global amcl_output
+    while not rospy.is_shutdown():
+        if amcl_recovery():
+            print "ok"
+            break
+    while not rospy.is_shutdown():
+        if amcl_pose.x_std > 0.5 or amcl_pose.y_std > 0.5:
+            rospy.wait_for_message('/scan', LaserScan)
+            n = 0
+            while not rospy.is_shutdown():
+                if n <= 4:
+                    amcl_initial_update()
+                    print "amcl_initial"
+                else:
+                    if (n - 5) % 5 == 0:
+                        amcl_global_update()
+                        print "amcl_global"
+                n += 1
+                if amcl_recovery():
+                    print "recovery ok"
+                    amcl_output.x = amcl_pose.x
+                    amcl_output.y = amcl_pose.y
+                    amcl_output.theta = amcl_pose.theta
+                    break
+            print '!!!!!!!!!!!!!!!!!!!!'
+        else:
+            amcl_output.x = amcl_pose.x
+            amcl_output.y = amcl_pose.y
+            amcl_output.theta = amcl_pose.theta
+            print amcl_pose.x_std, amcl_pose.y_std
+            # print "amcl_ok"
+
+
+## @brief 主函数
+def main():
+    global tfBuffer, listener, amcl_output, amcl_init_pose, odom_pose, out_pose, pub, pub_amcl
+    try:
+        rospy.init_node('combined_test')
+        tfBuffer = tf2_ros.Buffer()
+        listener = tf2_ros.TransformListener(tfBuffer)
+        amcl_pose = AMCL_unit()
+        amcl_output = AMCL_unit()
+        amcl_init_pose = PoseWithCovarianceStamped()
+        gps_pose = GPS_unit()
+        odom_pose = Odom_unit()
+        out_pose = SELECTED()
+        rospy.Subscriber('/fuse/map_odom', PoseWithCovarianceStamped, amcl_pose.fix)
+        rospy.Subscriber('/Gnss_Odom_res', Gnss_Odom_lyz, gps_pose.update)
+        rospy.Subscriber('/odom', Odometry, amcl_pose.update)
+        rospy.Subscriber('/initialpose', PoseWithCovarianceStamped, amcl_initial_callback)
+        pub = rospy.Publisher('/fuse/tf', Fuse_tf, queue_size=100)
+        pub_amcl = rospy.Publisher('/initialpose', PoseWithCovarianceStamped, queue_size=1)
+
+        t1 = threading.Thread(target=make_choice)
+        t2 = threading.Thread(target=amcl_process)
+        t1.start()
+        t2.start()
+
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        pass
+
+
+if __name__ == '__main__':
+    main()
+
+

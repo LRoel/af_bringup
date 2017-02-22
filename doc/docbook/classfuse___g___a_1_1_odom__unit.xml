@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classfuse___g___a_1_1_odom__unit">
+<title>fuse_G_A::Odom_unit class Reference</title>
+<para>Inheritance diagram for fuse_G_A::Odom_unit</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classfuse___g___a_1_1_odom__unit__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for fuse_G_A::Odom_unit</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classfuse___g___a_1_1_odom__unit__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x<para><emphasis>x</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x_std<para><emphasis>x标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y<para><emphasis>y</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y_std<para><emphasis>y标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta<para><emphasis>角度</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta_std<para><emphasis>角度标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classfuse___g___a_1_1_odom__unit_1a420542a0674acb8055e7221bbd73414e">__init__</link> (
+self )<para><emphasis>构造函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classfuse___g___a_1_1_odom__unit_1ab9da321766e96144c126c0cfedb4e957">output</link> (
+self )<para><emphasis>输出</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>里程计数据存储类 </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 206 of file fuse_G_A.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>fuse_G_A.py</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classfuse___g___a_1_1_odom__unit_1a420542a0674acb8055e7221bbd73414e">
+                <title>def fuse_G_A.Odom_unit.__init__ (self)</title> <emphasis>构造函数</emphasis>
+                
+            </section>
+            <section xml:id="classfuse___g___a_1_1_odom__unit_1ab9da321766e96144c126c0cfedb4e957">
+                <title>def fuse_G_A.Odom_unit.output (self)</title> <emphasis>输出</emphasis>
+                
+            </section>
+</section>

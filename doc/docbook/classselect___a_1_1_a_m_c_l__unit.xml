@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classselect___a_1_1_a_m_c_l__unit">
+<title>select_A::AMCL_unit class Reference</title>
+<para>Inheritance diagram for select_A::AMCL_unit</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classselect___a_1_1_a_m_c_l__unit__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for select_A::AMCL_unit</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classselect___a_1_1_a_m_c_l__unit__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x<para><emphasis>x</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x_std<para><emphasis>x标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y<para><emphasis>y</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y_std<para><emphasis>y标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta<para><emphasis>角度</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta_std<para><emphasis>角度标准差</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_theta_base<para><emphasis>累计角度</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_x_base<para><emphasis>累计x</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>_y_base<para><emphasis>累计y</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_a_m_c_l__unit_1a8900541517098e5491ed40c4d282beb8">__init__</link> (
+self )<para><emphasis>构造函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_a_m_c_l__unit_1aee2f9bf2fbf4ad2a59d32b00533e33ab">update</link> (
+self , odom_msg )<para><emphasis>里程计更新</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_a_m_c_l__unit_1a586f600a47a66f0e69275fe2fcc8fd65">fix</link> (
+self , odom_map_msg )<para><emphasis>AMCL修正输入</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_a_m_c_l__unit_1a1889f634cc13d1c3a83eb45c5ef22d54">lock</link> (
+self )<para><emphasis>将AMCL输出结果置为不可信</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_a_m_c_l__unit_1a5c23f7326d10c0224a5115a8bffbb64e">output</link> (
+self )<para><emphasis>输出</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>AMCL存储类 </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 132 of file select_A.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>select_A.py</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classselect___a_1_1_a_m_c_l__unit_1a8900541517098e5491ed40c4d282beb8">
+                <title>def select_A.AMCL_unit.__init__ (self)</title> <emphasis>构造函数</emphasis>
+                
+            </section>
+            <section xml:id="classselect___a_1_1_a_m_c_l__unit_1aee2f9bf2fbf4ad2a59d32b00533e33ab">
+                <title>def select_A.AMCL_unit.update (self, odom_msg)</title> <emphasis>里程计更新</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>odom_msg</entry>
+                                <entry>
+<para>ros里程计输入</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>See also: </title>
+
+<para>_pos 位置矩阵 </para>
+<simplesect/>
+<para>_pose_base 位置基准矩阵 </para>
+<simplesect/>
+<para>_pose_update 坐标系变换 </para>
+<simplesect/>
+<para>_quat 四元数 </para>
+<simplesect/>
+<para><link linkend="namespaceselect___a_1af5f7c62998c1bd067d53a259ca8a256c">flag_robot_move</link> 机器人运动标志 </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classselect___a_1_1_a_m_c_l__unit_1a586f600a47a66f0e69275fe2fcc8fd65">
+                <title>def select_A.AMCL_unit.fix (self, odom_map_msg)</title> <emphasis>AMCL修正输入</emphasis>
+                
+<para>将AMCL修正输入的map-&gt;odom和里程计输入融合生成实时的AMCL输出值(机器人在地图上的激光定位)</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>odom_map_msg</entry>
+                                <entry>
+<para>AMCL的输入的map-&gt;odom </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classselect___a_1_1_a_m_c_l__unit_1a1889f634cc13d1c3a83eb45c5ef22d54">
+                <title>def select_A.AMCL_unit.lock (self)</title> <emphasis>将AMCL输出结果置为不可信</emphasis>
+                
+            </section>
+            <section xml:id="classselect___a_1_1_a_m_c_l__unit_1a5c23f7326d10c0224a5115a8bffbb64e">
+                <title>def select_A.AMCL_unit.output (self)</title> <emphasis>输出</emphasis>
+                
+            </section>
+</section>

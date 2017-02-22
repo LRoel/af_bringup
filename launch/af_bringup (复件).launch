@@ -1,0 +1,9 @@
+<launch>
+	<arg name="urdf_file" default="$(find af_bringup)/urdf/husky.urdf.xacro" />
+  <param name="robot_description" command="$(arg urdf_file)" />
+  <node name="af_serial_node" pkg="af_bringup" type="af_serial_node" />
+
+  <node name="af_bringup_node" pkg="af_bringup" type="af_bringup_node" />
+
+</launch>
+

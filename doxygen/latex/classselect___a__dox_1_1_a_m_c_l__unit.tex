@@ -1,0 +1,309 @@
+\hypertarget{classselect___a__dox_1_1_a_m_c_l__unit}{}\section{select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit Class Reference}
+\label{classselect___a__dox_1_1_a_m_c_l__unit}\index{select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit}}
+
+
+A\+M\+C\+L存储类  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a75ef8e5b279e2dde8972ba0a09cd2ff5}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+def \hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a9c81d73d5e22dc32abd7678cf7f70cc9}{update} (self, odom\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em 里程计更新 \end{DoxyCompactList}\item 
+def \hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a1f6f020f331d34d9b98d93c29597906c}{fix} (self, odom\+\_\+map\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em A\+M\+C\+L修正输入 \end{DoxyCompactList}\item 
+def \hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a75cca19313b32fbed7fbd1181c06761c}{lock} (self)
+\begin{DoxyCompactList}\small\item\em 将\+A\+M\+C\+L输出结果置为不可信 \end{DoxyCompactList}\item 
+def \hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a82003fb543cb2eba9752b571e2b1afdd}{output} (self)
+\begin{DoxyCompactList}\small\item\em 输出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_ab99918fce5a7575038f3b740fa24068b}{x}
+\begin{DoxyCompactList}\small\item\em x \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_ad1329d297c070512332f7eedc1c45593}{x\+\_\+std}
+\begin{DoxyCompactList}\small\item\em x标准差 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a2a8c0b97aabfa5060f7cd48707c778a9}{y}
+\begin{DoxyCompactList}\small\item\em y \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a3fe7e19950224b3ad9fba262dbf76847}{y\+\_\+std}
+\begin{DoxyCompactList}\small\item\em y标准差 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a23061bf69414dd3fae1b97ca16e7b772}{theta}
+\begin{DoxyCompactList}\small\item\em 角度 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a64c8ffbe1a0efdcc2bb10c579d166bb3}{theta\+\_\+std}
+\begin{DoxyCompactList}\small\item\em 角度标准差 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a827a570aad16f5ea7d96c8fcadc7f7f8}{\+\_\+theta\+\_\+base}
+\begin{DoxyCompactList}\small\item\em 累计角度 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a2f9b22e3088f53992c9d407ace117716}{\+\_\+x\+\_\+base}
+\begin{DoxyCompactList}\small\item\em 累计x \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_a_m_c_l__unit_a3367abe32dd0b90849e60c51aadd35f8}{\+\_\+y\+\_\+base}
+\begin{DoxyCompactList}\small\item\em 累计y \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+M\+C\+L存储类 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a75ef8e5b279e2dde8972ba0a09cd2ff5}\label{classselect___a__dox_1_1_a_m_c_l__unit_a75ef8e5b279e2dde8972ba0a09cd2ff5}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyCode}
+163     \textcolor{keyword}{def }\_\_init\_\_(self):
+164         self.x = 0
+165         self.x\_std = MAX\_STD
+166         self.y = 0
+167         self.y\_std = MAX\_STD
+168         self.theta = 0
+169         self.theta\_std = MAX\_STD
+170         self.\_theta\_base = 0
+171         self.\_x\_base = 0
+172         self.\_y\_base = 0
+173 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a1f6f020f331d34d9b98d93c29597906c}\label{classselect___a__dox_1_1_a_m_c_l__unit_a1f6f020f331d34d9b98d93c29597906c}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!fix@{fix}}
+\index{fix@{fix}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{fix()}{fix()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+fix (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{odom\+\_\+map\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+A\+M\+C\+L修正输入 
+
+将\+A\+M\+C\+L修正输入的map-\/$>$odom和里程计输入融合生成实时的\+A\+M\+C\+L输出值(机器人在地图上的激光定位)
+
+
+\begin{DoxyParams}{Parameters}
+{\em odom\+\_\+map\+\_\+msg} & A\+M\+C\+L的输入的map-\/$>$odom \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+236     \textcolor{keyword}{def }fix(self, odom\_map\_msg):
+237 
+238         \textcolor{comment}{# print "fixed"}
+239         
+242         \_quat = [odom\_map\_msg.pose.pose.orientation.x, odom\_map\_msg.pose.pose.orientation.y, 
+      odom\_map\_msg.pose.pose.orientation.z,
+243                  odom\_map\_msg.pose.pose.orientation.w]
+244         self.\_theta\_base = tft.euler\_from\_quaternion(\_quat)[2]
+245         self.\_x\_base = odom\_map\_msg.pose.pose.position.x
+246         self.\_y\_base = odom\_map\_msg.pose.pose.position.y
+247         self.x\_std = math.sqrt(odom\_map\_msg.pose.covariance[0])
+248         self.y\_std = math.sqrt(odom\_map\_msg.pose.covariance[7])
+249         self.theta\_std = math.sqrt(odom\_map\_msg.pose.covariance[35])
+250 
+\end{DoxyCode}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a75cca19313b32fbed7fbd1181c06761c}\label{classselect___a__dox_1_1_a_m_c_l__unit_a75cca19313b32fbed7fbd1181c06761c}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!lock@{lock}}
+\index{lock@{lock}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+lock (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+将\+A\+M\+C\+L输出结果置为不可信 
+
+
+\begin{DoxyCode}
+252     \textcolor{keyword}{def }lock(self):
+253         self.x\_std = MAX\_STD
+254         self.y\_std = MAX\_STD
+255         self.theta\_std = MAX\_STD
+256 
+\end{DoxyCode}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a82003fb543cb2eba9752b571e2b1afdd}\label{classselect___a__dox_1_1_a_m_c_l__unit_a82003fb543cb2eba9752b571e2b1afdd}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!output@{output}}
+\index{output@{output}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+output (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+输出 
+
+
+\begin{DoxyCode}
+258     \textcolor{keyword}{def }output(self):
+259         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x: "}, self.x, \textcolor{stringliteral}{"| y: "}, self.y, \textcolor{stringliteral}{"| theta: "}, self.theta
+260         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x\_std: "}, self.x\_std, \textcolor{stringliteral}{"| y\_std: "}, self.y\_std, \textcolor{stringliteral}{"| theta\_std: "}, self.theta\_std
+261 
+262 
+\end{DoxyCode}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a9c81d73d5e22dc32abd7678cf7f70cc9}\label{classselect___a__dox_1_1_a_m_c_l__unit_a9c81d73d5e22dc32abd7678cf7f70cc9}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!update@{update}}
+\index{update@{update}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{odom\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+里程计更新 
+
+
+\begin{DoxyParams}{Parameters}
+{\em odom\+\_\+msg} & ros里程计输入\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\+\_\+pos 位置矩阵 
+
+\+\_\+pose\+\_\+base 位置基准矩阵 
+
+\+\_\+pose\+\_\+update 坐标系变换 
+
+\+\_\+quat 四元数 
+
+\hyperlink{namespaceselect___a__dox_aab650782f9bf9e653748df1ce43ba0a3}{flag\+\_\+robot\+\_\+move} 机器人运动标志 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}
+187     \textcolor{keyword}{def }update(self, odom\_msg):
+188 
+189         \textcolor{keyword}{global} flag\_robot\_move
+190         odom\_msg = Odometry()
+191         
+194         \_pos = np.array([[odom\_msg.pose.pose.position.x], [odom\_msg.pose.pose.position.y]])
+195         odom\_pose.x = \_pos[0, 0]
+196         odom\_pose.y = \_pos[1, 0]
+197         
+200         \_pos\_base = np.array([[self.\_x\_base], [self.\_y\_base]], dtype=float)
+201         
+204         \_quat = [odom\_msg.pose.pose.orientation.x, odom\_msg.pose.pose.orientation.y, 
+      odom\_msg.pose.pose.orientation.z,
+205                  odom\_msg.pose.pose.orientation.w]
+206         
+209         \_theta = tft.euler\_from\_quaternion(\_quat)[2]
+210         
+213         \_pos\_updated = np.dot(\hyperlink{namespaceselect___a__dox_aeb9ae60d7e093e9212176c74ab48f697}{matrix\_from\_theta}(self.\_theta\_base), \_pos) + \_pos\_base
+214         odom\_pose.theta = \_theta
+215         self.x = \_pos\_updated[0, 0]
+216         self.y = \_pos\_updated[1, 0]
+217         self.theta = \_theta + self.\_theta\_base
+218         out\_pose.set\_odom(odom\_pose.x, odom\_pose.y, odom\_pose.theta)
+219 
+220         \textcolor{keywordflow}{if} odom\_msg.twist.twist.linear.x ** 2 + odom\_msg.twist.twist.linear.y ** 2 <= STATIC\_LIMIT\_LINEAR *
+      * 2 \textcolor{keywordflow}{and} \(\backslash\)
+221                 math.fabs(odom\_msg.twist.twist.angular.z) <= STATIC\_LIMIT\_ANGULAR:
+222             flag\_robot\_move = 0
+223         \textcolor{keywordflow}{else}:
+224             flag\_robot\_move = 1
+225         \textcolor{comment}{# print "updated"}
+226         \textcolor{comment}{# self.output()}
+227 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a827a570aad16f5ea7d96c8fcadc7f7f8}\label{classselect___a__dox_1_1_a_m_c_l__unit_a827a570aad16f5ea7d96c8fcadc7f7f8}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!\+\_\+theta\+\_\+base@{\+\_\+theta\+\_\+base}}
+\index{\+\_\+theta\+\_\+base@{\+\_\+theta\+\_\+base}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+theta\+\_\+base}{\_theta\_base}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+\_\+theta\+\_\+base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+累计角度 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a2f9b22e3088f53992c9d407ace117716}\label{classselect___a__dox_1_1_a_m_c_l__unit_a2f9b22e3088f53992c9d407ace117716}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!\+\_\+x\+\_\+base@{\+\_\+x\+\_\+base}}
+\index{\+\_\+x\+\_\+base@{\+\_\+x\+\_\+base}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+x\+\_\+base}{\_x\_base}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+\_\+x\+\_\+base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+累计x 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a3367abe32dd0b90849e60c51aadd35f8}\label{classselect___a__dox_1_1_a_m_c_l__unit_a3367abe32dd0b90849e60c51aadd35f8}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!\+\_\+y\+\_\+base@{\+\_\+y\+\_\+base}}
+\index{\+\_\+y\+\_\+base@{\+\_\+y\+\_\+base}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+y\+\_\+base}{\_y\_base}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+\_\+y\+\_\+base\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+累计y 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a23061bf69414dd3fae1b97ca16e7b772}\label{classselect___a__dox_1_1_a_m_c_l__unit_a23061bf69414dd3fae1b97ca16e7b772}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!theta@{theta}}
+\index{theta@{theta}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+theta}
+
+
+
+角度 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a64c8ffbe1a0efdcc2bb10c579d166bb3}\label{classselect___a__dox_1_1_a_m_c_l__unit_a64c8ffbe1a0efdcc2bb10c579d166bb3}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!theta\+\_\+std@{theta\+\_\+std}}
+\index{theta\+\_\+std@{theta\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta\+\_\+std}{theta\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+theta\+\_\+std}
+
+
+
+角度标准差 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_ab99918fce5a7575038f3b740fa24068b}\label{classselect___a__dox_1_1_a_m_c_l__unit_ab99918fce5a7575038f3b740fa24068b}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!x@{x}}
+\index{x@{x}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+x}
+
+
+
+x 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_ad1329d297c070512332f7eedc1c45593}\label{classselect___a__dox_1_1_a_m_c_l__unit_ad1329d297c070512332f7eedc1c45593}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!x\+\_\+std@{x\+\_\+std}}
+\index{x\+\_\+std@{x\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{x\+\_\+std}{x\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+x\+\_\+std}
+
+
+
+x标准差 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a2a8c0b97aabfa5060f7cd48707c778a9}\label{classselect___a__dox_1_1_a_m_c_l__unit_a2a8c0b97aabfa5060f7cd48707c778a9}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!y@{y}}
+\index{y@{y}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+y}
+
+
+
+y 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_a_m_c_l__unit_a3fe7e19950224b3ad9fba262dbf76847}\label{classselect___a__dox_1_1_a_m_c_l__unit_a3fe7e19950224b3ad9fba262dbf76847}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}!y\+\_\+std@{y\+\_\+std}}
+\index{y\+\_\+std@{y\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+A\+M\+C\+L\+\_\+unit}}
+\subsubsection{\texorpdfstring{y\+\_\+std}{y\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+A\+M\+C\+L\+\_\+unit.\+y\+\_\+std}
+
+
+
+y标准差 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{select___a__dox_8py}{select\+\_\+\+A\+\_\+dox.\+py}\end{DoxyCompactItemize}

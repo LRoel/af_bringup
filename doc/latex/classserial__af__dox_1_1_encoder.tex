@@ -1,0 +1,110 @@
+\hypertarget{classserial__af__dox_1_1_encoder}{}\section{serial\+\_\+af\+\_\+dox.\+Encoder Class Reference}
+\label{classserial__af__dox_1_1_encoder}\index{serial\+\_\+af\+\_\+dox.\+Encoder@{serial\+\_\+af\+\_\+dox.\+Encoder}}
+
+
+类用来存储里程计信息  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classserial__af__dox_1_1_encoder_a57f2b90a574f07724da23ebb31d2d9d0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+def \hyperlink{classserial__af__dox_1_1_encoder_ad71ed14354c914c1d649c202df857215}{plot} (self)
+\begin{DoxyCompactList}\small\item\em 输出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classserial__af__dox_1_1_encoder_a06e3362e0391875aed606f92d35eae51}{left\+\_\+encoder\+\_\+val}
+\begin{DoxyCompactList}\small\item\em 左里程计值 \end{DoxyCompactList}\item 
+\hyperlink{classserial__af__dox_1_1_encoder_a46d2ec0b9a58e3ee0583d62c5582a49d}{right\+\_\+encoder\+\_\+val}
+\begin{DoxyCompactList}\small\item\em 右里程计值 \end{DoxyCompactList}\item 
+\hyperlink{classserial__af__dox_1_1_encoder_a46a4f38801448a876bf3f3fa0060d1ba}{encoder\+\_\+time}
+\begin{DoxyCompactList}\small\item\em 同步里程计时间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+类用来存储里程计信息 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserial__af__dox_1_1_encoder_a57f2b90a574f07724da23ebb31d2d9d0}\label{classserial__af__dox_1_1_encoder_a57f2b90a574f07724da23ebb31d2d9d0}} 
+\index{serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def serial\+\_\+af\+\_\+dox.\+Encoder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyCode}
+232     \textcolor{keyword}{def }\_\_init\_\_(self):
+233         self.left\_encoder\_val = 0
+234         self.right\_encoder\_val = 0
+235         self.encoder\_time = 0
+236 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classserial__af__dox_1_1_encoder_ad71ed14354c914c1d649c202df857215}\label{classserial__af__dox_1_1_encoder_ad71ed14354c914c1d649c202df857215}} 
+\index{serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}!plot@{plot}}
+\index{plot@{plot}!serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}}
+\subsubsection{\texorpdfstring{plot()}{plot()}}
+{\footnotesize\ttfamily def serial\+\_\+af\+\_\+dox.\+Encoder.\+plot (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+输出 
+
+
+\begin{DoxyCode}
+238     \textcolor{keyword}{def }plot(self):
+239         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"left\_encoder\_val"}, str(self.left\_encoder\_val)
+240         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"right\_encoder\_val"}, str(self.right\_encoder\_val)
+241         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"encoder\_time"}, str(self.encoder\_time)
+242 
+243 
+244 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classserial__af__dox_1_1_encoder_a46a4f38801448a876bf3f3fa0060d1ba}\label{classserial__af__dox_1_1_encoder_a46a4f38801448a876bf3f3fa0060d1ba}} 
+\index{serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}!encoder\+\_\+time@{encoder\+\_\+time}}
+\index{encoder\+\_\+time@{encoder\+\_\+time}!serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}}
+\subsubsection{\texorpdfstring{encoder\+\_\+time}{encoder\_time}}
+{\footnotesize\ttfamily serial\+\_\+af\+\_\+dox.\+Encoder.\+encoder\+\_\+time}
+
+
+
+同步里程计时间 
+
+\mbox{\Hypertarget{classserial__af__dox_1_1_encoder_a06e3362e0391875aed606f92d35eae51}\label{classserial__af__dox_1_1_encoder_a06e3362e0391875aed606f92d35eae51}} 
+\index{serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}!left\+\_\+encoder\+\_\+val@{left\+\_\+encoder\+\_\+val}}
+\index{left\+\_\+encoder\+\_\+val@{left\+\_\+encoder\+\_\+val}!serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}}
+\subsubsection{\texorpdfstring{left\+\_\+encoder\+\_\+val}{left\_encoder\_val}}
+{\footnotesize\ttfamily serial\+\_\+af\+\_\+dox.\+Encoder.\+left\+\_\+encoder\+\_\+val}
+
+
+
+左里程计值 
+
+\mbox{\Hypertarget{classserial__af__dox_1_1_encoder_a46d2ec0b9a58e3ee0583d62c5582a49d}\label{classserial__af__dox_1_1_encoder_a46d2ec0b9a58e3ee0583d62c5582a49d}} 
+\index{serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}!right\+\_\+encoder\+\_\+val@{right\+\_\+encoder\+\_\+val}}
+\index{right\+\_\+encoder\+\_\+val@{right\+\_\+encoder\+\_\+val}!serial\+\_\+af\+\_\+dox\+::\+Encoder@{serial\+\_\+af\+\_\+dox\+::\+Encoder}}
+\subsubsection{\texorpdfstring{right\+\_\+encoder\+\_\+val}{right\_encoder\_val}}
+{\footnotesize\ttfamily serial\+\_\+af\+\_\+dox.\+Encoder.\+right\+\_\+encoder\+\_\+val}
+
+
+
+右里程计值 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{serial__af__dox_8py}{serial\+\_\+af\+\_\+dox.\+py}\end{DoxyCompactItemize}

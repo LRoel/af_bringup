@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classselect___a_1_1_s_e_l_e_c_t_e_d">
+<title>select_A::SELECTED class Reference</title>
+<para>Inheritance diagram for select_A::SELECTED</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classselect___a_1_1_s_e_l_e_c_t_e_d__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for select_A::SELECTED</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classselect___a_1_1_s_e_l_e_c_t_e_d__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Data Fields</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>choice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x<para><emphasis>x</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>x_choice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y<para><emphasis>y</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>y_choice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta<para><emphasis>角度</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>theta_choice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fuse_tf<para><emphasis>ros输出格式</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1af17cc2a59273174c7a49668adb3535b3">__init__</link> (
+self )<para><emphasis>构造函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a10cd1ee60b084dd2a648527d63d75c08">set_map</link> (
+self , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a122a40eda7d2f01ef7f841e50cc2551a">x</link> , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a10eb0746408bf490fb698405f8c46560">y</link> , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a675a284225cd021c81e2d8e681bde862">theta</link> )<para><emphasis>将选则的最终结果数据放在输出中</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a2a0c99877c117015d42c1d84e31f504a">set_odom</link> (
+self , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a122a40eda7d2f01ef7f841e50cc2551a">x</link> , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a10eb0746408bf490fb698405f8c46560">y</link> , <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a675a284225cd021c81e2d8e681bde862">theta</link> )<para><emphasis>将里程计数据放在输出中</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="classselect___a_1_1_s_e_l_e_c_t_e_d_1a46c0648a3bcbf5a97f551412a83b1641">output</link> (
+self )<para><emphasis>输出</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>筛选结果类 </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+                <para>Definition at line 368 of file select_A.py</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>select_A.py</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Field Documentation</title>
+        </section>
+            <section xml:id="classselect___a_1_1_s_e_l_e_c_t_e_d_1af17cc2a59273174c7a49668adb3535b3">
+                <title>def select_A.SELECTED.__init__ (self)</title> <emphasis>构造函数</emphasis>
+                
+            </section>
+            <section xml:id="classselect___a_1_1_s_e_l_e_c_t_e_d_1a10cd1ee60b084dd2a648527d63d75c08">
+                <title>def select_A.SELECTED.set_map (self, x, y, theta)</title> <emphasis>将选则的最终结果数据放在输出中</emphasis>
+                
+            </section>
+            <section xml:id="classselect___a_1_1_s_e_l_e_c_t_e_d_1a2a0c99877c117015d42c1d84e31f504a">
+                <title>def select_A.SELECTED.set_odom (self, x, y, theta)</title> <emphasis>将里程计数据放在输出中</emphasis>
+                
+            </section>
+            <section xml:id="classselect___a_1_1_s_e_l_e_c_t_e_d_1a46c0648a3bcbf5a97f551412a83b1641">
+                <title>def select_A.SELECTED.output (self)</title> <emphasis>输出</emphasis>
+                
+            </section>
+</section>

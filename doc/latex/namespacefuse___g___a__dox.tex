@@ -1,0 +1,432 @@
+\hypertarget{namespacefuse___g___a__dox}{}\section{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox Namespace Reference}
+\label{namespacefuse___g___a__dox}\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfuse___g___a__dox_1_1_a_m_c_l__unit}{A\+M\+C\+L\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em A\+M\+C\+L存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit}{G\+P\+S\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em G\+P\+S数据存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_odom__unit}{Odom\+\_\+unit}
+\begin{DoxyCompactList}\small\item\em 里程计数据存储类 \end{DoxyCompactList}\item 
+class \hyperlink{classfuse___g___a__dox_1_1_s_e_l_e_c_t_e_d}{S\+E\+L\+E\+C\+T\+ED}
+\begin{DoxyCompactList}\small\item\em 筛选结果类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefuse___g___a__dox_a74ca52501813c654c46db737d87fd009}{matrix\+\_\+from\+\_\+theta} (theta)
+\begin{DoxyCompactList}\small\item\em 角度生成旋转矩阵(2x2) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_a3fb8553ee2aa4421c0b7e1931a0e06d3}{theta\+\_\+from\+\_\+matrix} (R)
+\begin{DoxyCompactList}\small\item\em 旋转矩阵(2x2)转成角度 \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}{send\+Transform} ()
+\begin{DoxyCompactList}\small\item\em 发送topic \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_afffb200826c683d789ba1613b24f12ff}{tran\+\_\+mat44} (trans)
+\begin{DoxyCompactList}\small\item\em 将ros格式中的\+Transform数据转为矩阵(4\+X4) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_a223efed7f7635370a23a69ae03068b56}{tran\+\_\+theta\+\_\+T} (trans)
+\begin{DoxyCompactList}\small\item\em 将ros格式中的\+Transform数据转为矩阵(2\+X2) \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{normalization} (a, b)
+\begin{DoxyCompactList}\small\item\em 归一化 \end{DoxyCompactList}\item 
+def \hyperlink{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}{make\+\_\+choice} ()
+\begin{DoxyCompactList}\small\item\em 筛选函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacefuse___g___a__dox_a7926ebd96da06b98fb5456a8ad2b91fe}{M\+A\+X\+\_\+\+S\+TD} = 999999999
+\begin{DoxyCompactList}\small\item\em 最大的标准差 \end{DoxyCompactList}\item 
+\hyperlink{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}{tf\+Buffer} = tf2\+\_\+ros.\+Buffer()
+\item 
+\hyperlink{namespacefuse___g___a__dox_af9e2cb2b46ad831441999e98b719ddac}{listener} = tf2\+\_\+ros.\+Transform\+Listener(\hyperlink{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}{tf\+Buffer})
+\item 
+\hyperlink{namespacefuse___g___a__dox_a16622f55cce6126a0d148d928851a0bc}{amcl\+\_\+pose} = \hyperlink{classfuse___g___a__dox_1_1_a_m_c_l__unit}{A\+M\+C\+L\+\_\+unit}()
+\item 
+\hyperlink{namespacefuse___g___a__dox_a09f59f9373060068bdb3831fa1af70d8}{gps\+\_\+pose} = \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit}{G\+P\+S\+\_\+unit}()
+\item 
+\hyperlink{namespacefuse___g___a__dox_abfd9a9f651abe0cd57872120a5fc770d}{odom\+\_\+pose} = \hyperlink{classfuse___g___a__dox_1_1_odom__unit}{Odom\+\_\+unit}()
+\item 
+\hyperlink{namespacefuse___g___a__dox_a3df8ccaf4e9766e9c97abe02f7b8e9c6}{out\+\_\+pose} = \hyperlink{classfuse___g___a__dox_1_1_s_e_l_e_c_t_e_d}{S\+E\+L\+E\+C\+T\+ED}()
+\item 
+\hyperlink{namespacefuse___g___a__dox_af5a011d160dec3e582508223494e25b1}{pub} = rospy.\+Publisher(\textquotesingle{}/fuse/tf\textquotesingle{}, Fuse\+\_\+tf, queue\+\_\+size=100)
+\item 
+\hyperlink{namespacefuse___g___a__dox_a8259a50c04254f445d14a4f3e5af45de}{t2} = threading.\+Thread(target=\hyperlink{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}{send\+Transform})
+\item 
+\hyperlink{namespacefuse___g___a__dox_a34cdbd8e1cd88bd38360293158d2418b}{t1} = threading.\+Thread(target=\hyperlink{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}{make\+\_\+choice})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}\label{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!make\+\_\+choice@{make\+\_\+choice}}
+\index{make\+\_\+choice@{make\+\_\+choice}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{make\+\_\+choice()}{make\_choice()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+make\+\_\+choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+筛选函数 
+
+
+\begin{DoxyCode}
+438 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}{make\_choice}():
+439     rate = rospy.Rate(100)
+440     \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} rospy.is\_shutdown():
+441         
+444         \_x1 = amcl\_pose.x
+445         
+448         \_x2 = gps\_pose.x
+449         
+452         \_std\_x1 = amcl\_pose.x\_std
+453         
+456         \_std\_x2 = gps\_pose.x\_std
+457         \textcolor{keywordflow}{if} \_std\_x1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_x2 != MAX\_STD:
+458             
+461             \_w\_x1 = 0
+462             
+465             \_w\_x2 = 1
+466         \textcolor{keywordflow}{elif} \_std\_x1 != MAX\_STD \textcolor{keywordflow}{and} \_std\_x2 == MAX\_STD:
+467             
+470             \_w\_x1 = 1
+471             
+474             \_w\_x2 = 0
+475         \textcolor{keywordflow}{elif} \_std\_x1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_x2 == MAX\_STD:
+476             \textcolor{keywordflow}{continue}
+477         \textcolor{keywordflow}{else}:
+478             
+481             \_w\_x1 = \_std\_x2 / (\_std\_x1 + \_std\_x2)
+482             
+485             \_w\_x2 = \_std\_x1 / (\_std\_x1 + \_std\_x2)
+486         \textcolor{keywordflow}{if} \_w\_x1 > \_w\_x2:
+487             out\_pose.x\_choice = out\_pose.choice[1]
+488         \textcolor{keywordflow}{else}:
+489             out\_pose.x\_choice = out\_pose.choice[0]
+490         \_w\_x1, \_w\_x2 = \hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{normalization}(\_w\_x1, \_w\_x2)
+491         out\_pose.x = \_w\_x1 * \_x1 + \_w\_x2 * \_x2
+492         
+495         \_y1 = amcl\_pose.y
+496         
+499         \_y2 = gps\_pose.y
+500         
+503         \_std\_y1 = amcl\_pose.y\_std
+504         
+507         \_std\_y2 = gps\_pose.y\_std
+508         \textcolor{keywordflow}{if} \_std\_y1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_y2 != MAX\_STD:
+509             
+512             \_w\_y1 = 0
+513             
+516             \_w\_y2 = 1
+517         \textcolor{keywordflow}{elif} \_std\_y1 != MAX\_STD \textcolor{keywordflow}{and} \_std\_y2 == MAX\_STD:
+518             
+521             \_w\_y1 = 1
+522             
+525             \_w\_y2 = 0
+526         \textcolor{keywordflow}{elif} \_std\_y1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_y2 == MAX\_STD:
+527             \textcolor{keywordflow}{continue}
+528         \textcolor{keywordflow}{else}:
+529             
+532             \_w\_y1 = \_std\_y2 / (\_std\_y1 + \_std\_y2)
+533             
+536             \_w\_y2 = \_std\_y1 / (\_std\_y1 + \_std\_y2)
+537         \textcolor{keywordflow}{if} \_w\_y1 > \_w\_y2:
+538             out\_pose.y\_choice = out\_pose.choice[1]
+539         \textcolor{keywordflow}{else}:
+540             out\_pose.y\_choice = out\_pose.choice[0]
+541         \_w\_y1, \_w\_y2 = \hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{normalization}(\_w\_y1, \_w\_y2)
+542         out\_pose.y = \_w\_y1 * \_y1 + \_w\_y2 * \_y2
+543         
+546         \_theta1 = amcl\_pose.theta
+547         
+550         \_theta2 = gps\_pose.theta
+551         
+554         \_std\_theta1 = amcl\_pose.theta\_std
+555         
+558         \_std\_theta2 = gps\_pose.theta\_std
+559         \textcolor{keywordflow}{if} \_std\_theta1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_theta2 != MAX\_STD:
+560             
+563             \_w\_theta1 = 0
+564             
+567             \_w\_theta2 = 1
+568         \textcolor{keywordflow}{elif} \_std\_theta1 != MAX\_STD \textcolor{keywordflow}{and} \_std\_theta2 == MAX\_STD:
+569             
+572             \_w\_theta1 = 1
+573             
+576             \_w\_theta2 = 0
+577         \textcolor{keywordflow}{elif} \_std\_theta1 == MAX\_STD \textcolor{keywordflow}{and} \_std\_theta2 == MAX\_STD:
+578             \textcolor{keywordflow}{continue}
+579         \textcolor{keywordflow}{else}:
+580             
+583             \_w\_theta1 = \_std\_theta2 / (\_std\_theta1 + \_std\_theta2)
+584             
+587             \_w\_theta2 = \_std\_theta1 / (\_std\_theta1 + \_std\_theta2)
+588         \textcolor{keywordflow}{if} \_w\_theta1 > \_w\_theta2:
+589             out\_pose.theta\_choice = out\_pose.choice[1]
+590         \textcolor{keywordflow}{else}:
+591             out\_pose.theta\_choice = out\_pose.choice[0]
+592         \_w\_theta1, \_w\_theta2 = \hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{normalization}(\_w\_theta1, \_w\_theta2)
+593         out\_pose.theta = \_w\_theta1 * \_theta1 + \_w\_theta2 * \_theta2
+594         out\_pose.output()
+595         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"************OUT*************"}
+596         amcl\_pose.output()
+597         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"############AMCL#############"}
+598         gps\_pose.output()
+599         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"############GPS#############"}
+600 
+601         out\_pose.set\_map(out\_pose.x, out\_pose.y, out\_pose.theta)
+602 
+603         rate.sleep()
+604 
+605 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a74ca52501813c654c46db737d87fd009}\label{namespacefuse___g___a__dox_a74ca52501813c654c46db737d87fd009}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!matrix\+\_\+from\+\_\+theta@{matrix\+\_\+from\+\_\+theta}}
+\index{matrix\+\_\+from\+\_\+theta@{matrix\+\_\+from\+\_\+theta}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{matrix\+\_\+from\+\_\+theta()}{matrix\_from\_theta()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+matrix\+\_\+from\+\_\+theta (\begin{DoxyParamCaption}\item[{}]{theta }\end{DoxyParamCaption})}
+
+
+
+角度生成旋转矩阵(2x2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & 输入角度\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+输出旋转矩阵 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+39 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_a74ca52501813c654c46db737d87fd009}{matrix\_from\_theta}(theta):
+40 
+41     \textcolor{keywordflow}{return} np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])
+42 
+43 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}\label{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!normalization@{normalization}}
+\index{normalization@{normalization}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{normalization()}{normalization()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+normalization (\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+
+
+归一化 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 输入 \\
+\hline
+{\em b} & 输入\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+
+a a的归一化值 
+
+b b的归一化值 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+431 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_ab338e80a4f259a8d14b03d63b4c19d3b}{normalization}(a, b):
+432 
+433     sum = a + b
+434     \textcolor{keywordflow}{return} a/sum, b/sum
+435 
+436 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}\label{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!send\+Transform@{send\+Transform}}
+\index{send\+Transform@{send\+Transform}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{send\+Transform()}{sendTransform()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+send\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+发送topic 
+
+40hz发布topic
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+\_\+pose} & ros输出格式数据 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+371 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}{sendTransform}():
+372 
+373     rate = rospy.Rate(40)
+374     br = tf2\_ros.TransformBroadcaster()
+375     \textcolor{keywordflow}{while} \textcolor{keywordflow}{not} rospy.is\_shutdown():
+376         pub.publish(out\_pose.fuse\_tf)
+377         rate.sleep()
+378 
+379 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a3fb8553ee2aa4421c0b7e1931a0e06d3}\label{namespacefuse___g___a__dox_a3fb8553ee2aa4421c0b7e1931a0e06d3}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!theta\+\_\+from\+\_\+matrix@{theta\+\_\+from\+\_\+matrix}}
+\index{theta\+\_\+from\+\_\+matrix@{theta\+\_\+from\+\_\+matrix}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{theta\+\_\+from\+\_\+matrix()}{theta\_from\_matrix()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+theta\+\_\+from\+\_\+matrix (\begin{DoxyParamCaption}\item[{}]{R }\end{DoxyParamCaption})}
+
+
+
+旋转矩阵(2x2)转成角度 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & 输入旋转矩阵\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+输出角度值 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+53 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_a3fb8553ee2aa4421c0b7e1931a0e06d3}{theta\_from\_matrix}(R):
+54 
+55     
+58     \_R\_12 = R[0, 1]
+59     
+62     \_R\_22 = R[1, 1]
+63     \textcolor{keywordflow}{if} -0.001 < \_R\_22 < 0.001 \textcolor{keywordflow}{and} \_R\_12 > 0:
+64         theta = math.pi / 2
+65     \textcolor{keywordflow}{elif} -0.001 < \_R\_22 < 0.001 \textcolor{keywordflow}{and} \_R\_12 < 0:
+66         theta = math.pi / 2
+67     \textcolor{keywordflow}{elif} 0.001 <= \_R\_22 \textcolor{keywordflow}{and} \_R\_12 > 0:
+68         theta = math.atan(\_R\_12 / \_R\_22)
+69     \textcolor{keywordflow}{elif} 0.001 <= \_R\_22 \textcolor{keywordflow}{and} \_R\_12 < 0:
+70         theta = math.atan(\_R\_12 / \_R\_22)
+71     \textcolor{keywordflow}{elif} \_R\_22 <= -0.001 \textcolor{keywordflow}{and} \_R\_12 > 0:
+72         theta = math.atan(\_R\_12 / \_R\_22) + math.pi
+73     \textcolor{keywordflow}{elif} \_R\_22 <= -0.001 \textcolor{keywordflow}{and} \_R\_12 < 0:
+74         theta = math.atan(\_R\_12 / \_R\_22) - math.pi
+75     \textcolor{keywordflow}{return} theta
+76 
+77 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_afffb200826c683d789ba1613b24f12ff}\label{namespacefuse___g___a__dox_afffb200826c683d789ba1613b24f12ff}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!tran\+\_\+mat44@{tran\+\_\+mat44}}
+\index{tran\+\_\+mat44@{tran\+\_\+mat44}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{tran\+\_\+mat44()}{tran\_mat44()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tran\+\_\+mat44 (\begin{DoxyParamCaption}\item[{}]{trans }\end{DoxyParamCaption})}
+
+
+
+将ros格式中的\+Transform数据转为矩阵(4\+X4) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & ros格式\+Transform数据 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+386 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_afffb200826c683d789ba1613b24f12ff}{tran\_mat44}(trans):
+387 
+388     trans\_xyz = [trans.transform.translation.x, trans.transform.translation.y, 0]
+389     trans\_quat = [0, 0, trans.transform.rotation.z,
+390                   trans.transform.rotation.w]
+391     mat44 = np.dot(tft.translation\_matrix(trans\_xyz), tft.quaternion\_matrix(trans\_quat))
+392     \textcolor{keywordflow}{return} mat44
+393 
+394 
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a223efed7f7635370a23a69ae03068b56}\label{namespacefuse___g___a__dox_a223efed7f7635370a23a69ae03068b56}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!tran\+\_\+theta\+\_\+T@{tran\+\_\+theta\+\_\+T}}
+\index{tran\+\_\+theta\+\_\+T@{tran\+\_\+theta\+\_\+T}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{tran\+\_\+theta\+\_\+\+T()}{tran\_theta\_T()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tran\+\_\+theta\+\_\+T (\begin{DoxyParamCaption}\item[{}]{trans }\end{DoxyParamCaption})}
+
+
+
+将ros格式中的\+Transform数据转为矩阵(2\+X2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & ros格式\+Transform数据 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+401 \textcolor{keyword}{def }\hyperlink{namespacefuse___g___a__dox_a223efed7f7635370a23a69ae03068b56}{tran\_theta\_T}(trans):
+402 
+403     
+406     \_quat = [trans.transform.rotation.x, trans.transform.rotation.y,
+407              trans.transform.rotation.z,
+408              trans.transform.rotation.w]
+409     
+412     \_theta = tft.euler\_from\_quaternion(\_quat)[2]
+413     
+416     \_T = np.array([[trans.transform.translation.x], [trans.transform.translation.y]])
+417     \textcolor{keywordflow}{return} \_theta, \_T
+418 
+419 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a16622f55cce6126a0d148d928851a0bc}\label{namespacefuse___g___a__dox_a16622f55cce6126a0d148d928851a0bc}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!amcl\+\_\+pose@{amcl\+\_\+pose}}
+\index{amcl\+\_\+pose@{amcl\+\_\+pose}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{amcl\+\_\+pose}{amcl\_pose}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+amcl\+\_\+pose = \hyperlink{classfuse___g___a__dox_1_1_a_m_c_l__unit}{A\+M\+C\+L\+\_\+unit}()}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a09f59f9373060068bdb3831fa1af70d8}\label{namespacefuse___g___a__dox_a09f59f9373060068bdb3831fa1af70d8}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!gps\+\_\+pose@{gps\+\_\+pose}}
+\index{gps\+\_\+pose@{gps\+\_\+pose}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{gps\+\_\+pose}{gps\_pose}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+gps\+\_\+pose = \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit}{G\+P\+S\+\_\+unit}()}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_af9e2cb2b46ad831441999e98b719ddac}\label{namespacefuse___g___a__dox_af9e2cb2b46ad831441999e98b719ddac}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!listener@{listener}}
+\index{listener@{listener}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{listener}{listener}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+listener = tf2\+\_\+ros.\+Transform\+Listener(\hyperlink{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}{tf\+Buffer})}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a7926ebd96da06b98fb5456a8ad2b91fe}\label{namespacefuse___g___a__dox_a7926ebd96da06b98fb5456a8ad2b91fe}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!M\+A\+X\+\_\+\+S\+TD@{M\+A\+X\+\_\+\+S\+TD}}
+\index{M\+A\+X\+\_\+\+S\+TD@{M\+A\+X\+\_\+\+S\+TD}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+TD}{MAX\_STD}}
+{\footnotesize\ttfamily int fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+M\+A\+X\+\_\+\+S\+TD = 999999999}
+
+
+
+最大的标准差 
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_abfd9a9f651abe0cd57872120a5fc770d}\label{namespacefuse___g___a__dox_abfd9a9f651abe0cd57872120a5fc770d}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!odom\+\_\+pose@{odom\+\_\+pose}}
+\index{odom\+\_\+pose@{odom\+\_\+pose}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{odom\+\_\+pose}{odom\_pose}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+odom\+\_\+pose = \hyperlink{classfuse___g___a__dox_1_1_odom__unit}{Odom\+\_\+unit}()}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a3df8ccaf4e9766e9c97abe02f7b8e9c6}\label{namespacefuse___g___a__dox_a3df8ccaf4e9766e9c97abe02f7b8e9c6}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!out\+\_\+pose@{out\+\_\+pose}}
+\index{out\+\_\+pose@{out\+\_\+pose}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{out\+\_\+pose}{out\_pose}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+out\+\_\+pose = \hyperlink{classfuse___g___a__dox_1_1_s_e_l_e_c_t_e_d}{S\+E\+L\+E\+C\+T\+ED}()}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_af5a011d160dec3e582508223494e25b1}\label{namespacefuse___g___a__dox_af5a011d160dec3e582508223494e25b1}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!pub@{pub}}
+\index{pub@{pub}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+pub = rospy.\+Publisher(\textquotesingle{}/fuse/tf\textquotesingle{}, Fuse\+\_\+tf, queue\+\_\+size=100)}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a34cdbd8e1cd88bd38360293158d2418b}\label{namespacefuse___g___a__dox_a34cdbd8e1cd88bd38360293158d2418b}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!t1@{t1}}
+\index{t1@{t1}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{t1}{t1}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+t1 = threading.\+Thread(target=\hyperlink{namespacefuse___g___a__dox_ad6aad4771679d9483d428a51103c238b}{make\+\_\+choice})}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a8259a50c04254f445d14a4f3e5af45de}\label{namespacefuse___g___a__dox_a8259a50c04254f445d14a4f3e5af45de}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!t2@{t2}}
+\index{t2@{t2}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{t2}{t2}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+t2 = threading.\+Thread(target=\hyperlink{namespacefuse___g___a__dox_ad108902a215abb21ef4598a8465d1513}{send\+Transform})}
+
+\mbox{\Hypertarget{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}\label{namespacefuse___g___a__dox_a8ae9d461cb984beb56dc05ab5626f0fa}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}!tf\+Buffer@{tf\+Buffer}}
+\index{tf\+Buffer@{tf\+Buffer}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox}}
+\subsubsection{\texorpdfstring{tf\+Buffer}{tfBuffer}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+tf\+Buffer = tf2\+\_\+ros.\+Buffer()}
+

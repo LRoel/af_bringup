@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacefuse___g___a">
+<title>fuse_G_A</title>
+        <section>
+            <title> Data Structures </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classfuse___g___a_1_1_a_m_c_l__unit">fuse_G_A::AMCL_unit</link></para>
+<para><emphasis>AMCL存储类</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classfuse___g___a_1_1_g_p_s__unit">fuse_G_A::GPS_unit</link></para>
+<para><emphasis>GPS数据存储类</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classfuse___g___a_1_1_odom__unit">fuse_G_A::Odom_unit</link></para>
+<para><emphasis>里程计数据存储类</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classfuse___g___a_1_1_s_e_l_e_c_t_e_d">fuse_G_A::SELECTED</link></para>
+<para><emphasis>筛选结果类</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="namespacefuse___g___a_1aaf941e74ed538c700295aac63ee67285">MAX_STD</link><para><emphasis>最大的标准差</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a11d49507fb155a9ee2f990026fd61296">tfBuffer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1afbe833a768eabf8b7b5ff6c185358368">listener</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1ad44ef455cd859abf54b7fb820ac11fba">amcl_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a1d4e9854825529f046953591e1b9766f">gps_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a6db926371ea8e7616cf9da51a44f20bd">odom_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a5949d6caccbce2dc58746d004a31bf93">out_pose</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a6fc70b260b3bf31db68f3261fcd332d1">pub</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1a0687b548a1348e39b486842bcddc00ef">t2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="namespacefuse___g___a_1aeffb45e80aff08f6f7194fcbc88eff08">t1</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1a74f80657b382fa053abcca4f446c4036">matrix_from_theta</link> (
+theta )<para><emphasis>角度生成旋转矩阵(2x2)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1aabfeca3b897b1b53700aeb3d5a2b7f74">theta_from_matrix</link> (
+R )<para><emphasis>旋转矩阵(2x2)转成角度</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1a6d74da897ef71d656b91058602147dd2">sendTransform</link> (
+)<para><emphasis>发送topic</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1aebc43ce6f276fb2bbbf7689d12b37589">tran_mat44</link> (
+trans )<para><emphasis>将ros格式中的Transform数据转为矩阵(4X4)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1afe710c875e91776f6ae39f3c9e73798a">tran_theta_T</link> (
+trans )<para><emphasis>将ros格式中的Transform数据转为矩阵(2X2)</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1add9a25d710f1565c5ea9d8706824422b">normalization</link> (
+a , b )<para><emphasis>归一化</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>def <link linkend="namespacefuse___g___a_1a42c3d8256503837ca1b83810899b7ef1">make_choice</link> (
+)<para><emphasis>筛选函数</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

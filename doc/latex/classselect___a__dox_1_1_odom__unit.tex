@@ -1,0 +1,147 @@
+\hypertarget{classselect___a__dox_1_1_odom__unit}{}\section{select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit Class Reference}
+\label{classselect___a__dox_1_1_odom__unit}\index{select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit}}
+
+
+里程计数据存储类  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classselect___a__dox_1_1_odom__unit_a49c773e3b8285f9e34bd76650e467560}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+def \hyperlink{classselect___a__dox_1_1_odom__unit_aae71c1d0731f7d23c8c41c4859831f0b}{output} (self)
+\begin{DoxyCompactList}\small\item\em 输出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_ae48196e11b6528df6968b016cafbe3af}{x}
+\begin{DoxyCompactList}\small\item\em x \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_a17ed824dc140708d9394a796ca525d38}{x\+\_\+std}
+\begin{DoxyCompactList}\small\item\em x标准差 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_ad541c5ad51695034973d0cdf5c1b6f2e}{y}
+\begin{DoxyCompactList}\small\item\em y \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_a5fc9b6033f85c19f60a6d7faddbf46d2}{y\+\_\+std}
+\begin{DoxyCompactList}\small\item\em y标准差 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_a61441083f45a04659d2aa00d050d9026}{theta}
+\begin{DoxyCompactList}\small\item\em 角度 \end{DoxyCompactList}\item 
+\hyperlink{classselect___a__dox_1_1_odom__unit_af4b26cfc5620e927234f1163d4800cf1}{theta\+\_\+std}
+\begin{DoxyCompactList}\small\item\em 角度标准差 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+里程计数据存储类 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_a49c773e3b8285f9e34bd76650e467560}\label{classselect___a__dox_1_1_odom__unit_a49c773e3b8285f9e34bd76650e467560}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyCode}
+289     \textcolor{keyword}{def }\_\_init\_\_(self):
+290         self.x = 0
+291         self.x\_std = MAX\_STD
+292         self.y = 0
+293         self.y\_std = MAX\_STD
+294         self.theta = 0
+295         self.theta\_std = MAX\_STD
+296 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_aae71c1d0731f7d23c8c41c4859831f0b}\label{classselect___a__dox_1_1_odom__unit_aae71c1d0731f7d23c8c41c4859831f0b}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!output@{output}}
+\index{output@{output}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily def select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+output (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+输出 
+
+
+\begin{DoxyCode}
+298     \textcolor{keyword}{def }output(self):
+299         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x: "}, self.x, \textcolor{stringliteral}{"| y: "}, self.y, \textcolor{stringliteral}{"| theta: "}, self.theta
+300         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x\_std: "}, self.x\_std, \textcolor{stringliteral}{"| y\_std: "}, self.y\_std, \textcolor{stringliteral}{"| theta\_std: "}, self.theta\_std
+301 
+302 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_a61441083f45a04659d2aa00d050d9026}\label{classselect___a__dox_1_1_odom__unit_a61441083f45a04659d2aa00d050d9026}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!theta@{theta}}
+\index{theta@{theta}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+theta}
+
+
+
+角度 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_af4b26cfc5620e927234f1163d4800cf1}\label{classselect___a__dox_1_1_odom__unit_af4b26cfc5620e927234f1163d4800cf1}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!theta\+\_\+std@{theta\+\_\+std}}
+\index{theta\+\_\+std@{theta\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta\+\_\+std}{theta\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+theta\+\_\+std}
+
+
+
+角度标准差 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_ae48196e11b6528df6968b016cafbe3af}\label{classselect___a__dox_1_1_odom__unit_ae48196e11b6528df6968b016cafbe3af}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!x@{x}}
+\index{x@{x}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+x}
+
+
+
+x 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_a17ed824dc140708d9394a796ca525d38}\label{classselect___a__dox_1_1_odom__unit_a17ed824dc140708d9394a796ca525d38}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!x\+\_\+std@{x\+\_\+std}}
+\index{x\+\_\+std@{x\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{x\+\_\+std}{x\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+x\+\_\+std}
+
+
+
+x标准差 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_ad541c5ad51695034973d0cdf5c1b6f2e}\label{classselect___a__dox_1_1_odom__unit_ad541c5ad51695034973d0cdf5c1b6f2e}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!y@{y}}
+\index{y@{y}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+y}
+
+
+
+y 
+
+\mbox{\Hypertarget{classselect___a__dox_1_1_odom__unit_a5fc9b6033f85c19f60a6d7faddbf46d2}\label{classselect___a__dox_1_1_odom__unit_a5fc9b6033f85c19f60a6d7faddbf46d2}} 
+\index{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}!y\+\_\+std@{y\+\_\+std}}
+\index{y\+\_\+std@{y\+\_\+std}!select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit@{select\+\_\+\+A\+\_\+dox\+::\+Odom\+\_\+unit}}
+\subsubsection{\texorpdfstring{y\+\_\+std}{y\_std}}
+{\footnotesize\ttfamily select\+\_\+\+A\+\_\+dox.\+Odom\+\_\+unit.\+y\+\_\+std}
+
+
+
+y标准差 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{select___a__dox_8py}{select\+\_\+\+A\+\_\+dox.\+py}\end{DoxyCompactItemize}

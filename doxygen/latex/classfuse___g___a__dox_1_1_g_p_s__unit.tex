@@ -1,0 +1,175 @@
+\hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit}{}\section{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit Class Reference}
+\label{classfuse___g___a__dox_1_1_g_p_s__unit}\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit}}
+
+
+G\+P\+S数据存储类  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_a1ee1c5d52b638164821db317a238df69}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+def \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_acc33497e0247428c5c90fe1d0f36d546}{update} (self, gps\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em G\+P\+S数据更新函数 \end{DoxyCompactList}\item 
+def \hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_a8eac802afb7e54364521bda5e3fe995f}{output} (self)
+\begin{DoxyCompactList}\small\item\em 输出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_a7b9267f80aaaa4bf4723bfd7a94283b5}{x}
+\begin{DoxyCompactList}\small\item\em x \end{DoxyCompactList}\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_ab130db906b1f542d0dce2aaccfa9297f}{x\+\_\+std}
+\begin{DoxyCompactList}\small\item\em x标准差 \end{DoxyCompactList}\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_a496a2def07de8b075d8c99cc1056c07e}{y}
+\begin{DoxyCompactList}\small\item\em y \end{DoxyCompactList}\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_ad872d2a6a5596e287c138aef6082e6ae}{y\+\_\+std}
+\begin{DoxyCompactList}\small\item\em y标准差 \end{DoxyCompactList}\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_ab848ec313c0eef141c37505721a05987}{theta}
+\begin{DoxyCompactList}\small\item\em 角度 \end{DoxyCompactList}\item 
+\hyperlink{classfuse___g___a__dox_1_1_g_p_s__unit_afe1d002e574689b63e355a45af8991f3}{theta\+\_\+std}
+\begin{DoxyCompactList}\small\item\em 角度标准差 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\+P\+S数据存储类 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_a1ee1c5d52b638164821db317a238df69}\label{classfuse___g___a__dox_1_1_g_p_s__unit_a1ee1c5d52b638164821db317a238df69}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyCode}
+267     \textcolor{keyword}{def }\_\_init\_\_(self):
+268         self.x = 0
+269         self.x\_std = MAX\_STD
+270         self.y = 0
+271         self.y\_std = MAX\_STD
+272         self.theta = 0
+273         self.theta\_std = MAX\_STD
+274 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_a8eac802afb7e54364521bda5e3fe995f}\label{classfuse___g___a__dox_1_1_g_p_s__unit_a8eac802afb7e54364521bda5e3fe995f}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!output@{output}}
+\index{output@{output}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+output (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+输出 
+
+
+\begin{DoxyCode}
+290     \textcolor{keyword}{def }output(self):
+291         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x: "}, self.x, \textcolor{stringliteral}{"| y: "}, self.y, \textcolor{stringliteral}{"| theta: "}, self.theta
+292         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"x\_std: "}, self.x\_std, \textcolor{stringliteral}{"| y\_std: "}, self.y\_std, \textcolor{stringliteral}{"| theta\_std: "}, self.theta\_std
+293 
+294 
+\end{DoxyCode}
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_acc33497e0247428c5c90fe1d0f36d546}\label{classfuse___g___a__dox_1_1_g_p_s__unit_acc33497e0247428c5c90fe1d0f36d546}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!update@{update}}
+\index{update@{update}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{gps\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+G\+P\+S数据更新函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gps\+\_\+msg} & G\+P\+S数据输入 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+281     \textcolor{keyword}{def }update(self, gps\_msg):
+282         self.x = gps\_msg.X
+283         self.x\_std = gps\_msg.X\_std
+284         self.y = gps\_msg.Y
+285         self.y\_std = gps\_msg.Y\_std
+286         self.theta = gps\_msg.Hdg
+287         self.theta\_std = gps\_msg.Hdg\_std
+288 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_ab848ec313c0eef141c37505721a05987}\label{classfuse___g___a__dox_1_1_g_p_s__unit_ab848ec313c0eef141c37505721a05987}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!theta@{theta}}
+\index{theta@{theta}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta}{theta}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+theta}
+
+
+
+角度 
+
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_afe1d002e574689b63e355a45af8991f3}\label{classfuse___g___a__dox_1_1_g_p_s__unit_afe1d002e574689b63e355a45af8991f3}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!theta\+\_\+std@{theta\+\_\+std}}
+\index{theta\+\_\+std@{theta\+\_\+std}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{theta\+\_\+std}{theta\_std}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+theta\+\_\+std}
+
+
+
+角度标准差 
+
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_a7b9267f80aaaa4bf4723bfd7a94283b5}\label{classfuse___g___a__dox_1_1_g_p_s__unit_a7b9267f80aaaa4bf4723bfd7a94283b5}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!x@{x}}
+\index{x@{x}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+x}
+
+
+
+x 
+
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_ab130db906b1f542d0dce2aaccfa9297f}\label{classfuse___g___a__dox_1_1_g_p_s__unit_ab130db906b1f542d0dce2aaccfa9297f}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!x\+\_\+std@{x\+\_\+std}}
+\index{x\+\_\+std@{x\+\_\+std}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{x\+\_\+std}{x\_std}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+x\+\_\+std}
+
+
+
+x标准差 
+
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_a496a2def07de8b075d8c99cc1056c07e}\label{classfuse___g___a__dox_1_1_g_p_s__unit_a496a2def07de8b075d8c99cc1056c07e}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!y@{y}}
+\index{y@{y}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+y}
+
+
+
+y 
+
+\mbox{\Hypertarget{classfuse___g___a__dox_1_1_g_p_s__unit_ad872d2a6a5596e287c138aef6082e6ae}\label{classfuse___g___a__dox_1_1_g_p_s__unit_ad872d2a6a5596e287c138aef6082e6ae}} 
+\index{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}!y\+\_\+std@{y\+\_\+std}}
+\index{y\+\_\+std@{y\+\_\+std}!fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit@{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox\+::\+G\+P\+S\+\_\+unit}}
+\subsubsection{\texorpdfstring{y\+\_\+std}{y\_std}}
+{\footnotesize\ttfamily fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+G\+P\+S\+\_\+unit.\+y\+\_\+std}
+
+
+
+y标准差 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fuse___g___a__dox_8py}{fuse\+\_\+\+G\+\_\+\+A\+\_\+dox.\+py}\end{DoxyCompactItemize}

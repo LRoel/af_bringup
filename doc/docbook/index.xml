@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>af_bringup</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespacefuse___g___a.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceselect___a.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceserial__af.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Data Structure Documentation</title>
+        <xi:include href="classfuse___g___a_1_1_a_m_c_l__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classselect___a_1_1_a_m_c_l__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classserial__af_1_1_encoder.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classserial__af_1_1_fuse___g_p_s___odom.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classserial__af_1_1_g_p_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classselect___a_1_1_g_p_s__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classfuse___g___a_1_1_g_p_s__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classfuse___g___a_1_1_odom__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classselect___a_1_1_odom__unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classselect___a_1_1_s_e_l_e_c_t_e_d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classfuse___g___a_1_1_s_e_l_e_c_t_e_d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="fuse___g___a_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="select___a_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="serial__af_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

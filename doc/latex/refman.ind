@@ -1,0 +1,562 @@
+\begin{theindex}
+
+  \item {\+\_\+\+\_\+init\+\_\+\+\_\+}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{22}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{40}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{43}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{51}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{26}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{38}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{45}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{48}
+    \subitem {serial\+\_\+af\+::\+Encoder}, \hyperpage{29}
+    \subitem {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{31}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{33}
+  \item {\+\_\+theta\+\_\+base}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{23}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{27}
+  \item {\+\_\+x\+\_\+base}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{23}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{27}
+  \item {\+\_\+y\+\_\+base}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{23}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{27}
+
+  \indexspace
+
+  \item {amcl\+\_\+global\+\_\+update}
+    \subitem {select\+\_\+A}, \hyperpage{12}
+  \item {amcl\+\_\+initial\+\_\+callback}
+    \subitem {select\+\_\+A}, \hyperpage{13}
+  \item {amcl\+\_\+initial\+\_\+update}
+    \subitem {select\+\_\+A}, \hyperpage{13}
+  \item {amcl\+\_\+nomotion\+\_\+update}
+    \subitem {select\+\_\+A}, \hyperpage{13}
+  \item {amcl\+\_\+pose}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+  \item {amcl\+\_\+process}
+    \subitem {select\+\_\+A}, \hyperpage{13}
+  \item {amcl\+\_\+recovery}
+    \subitem {select\+\_\+A}, \hyperpage{14}
+  \item {angle\+\_\+diff}
+    \subitem {select\+\_\+A}, \hyperpage{14}
+
+  \indexspace
+
+  \item {choice}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{52}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{49}
+  \item {crc\+\_\+novetal}
+    \subitem {serial\+\_\+af}, \hyperpage{19}
+
+  \indexspace
+
+  \item {encoder\+\_\+time}
+    \subitem {serial\+\_\+af\+::\+Encoder}, \hyperpage{30}
+
+  \indexspace
+
+  \item {fill}
+    \subitem {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{31}
+  \item {fix}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{22}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{26}
+  \item {flag\+\_\+robot\+\_\+move}
+    \subitem {select\+\_\+A}, \hyperpage{16}
+  \item {fuse\+\_\+\+G\+\_\+\+A.\+A\+M\+C\+L\+\_\+unit}, \hyperpage{21}
+  \item {fuse\+\_\+\+G\+\_\+\+A.\+G\+P\+S\+\_\+unit}, \hyperpage{40}
+  \item {fuse\+\_\+\+G\+\_\+\+A.\+Odom\+\_\+unit}, \hyperpage{42}
+  \item {fuse\+\_\+\+G\+\_\+\+A.\+py}, \hyperpage{55}
+  \item {fuse\+\_\+\+G\+\_\+\+A.\+S\+E\+L\+E\+C\+T\+ED}, \hyperpage{50}
+  \item {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{22}
+    \subitem {\+\_\+theta\+\_\+base}, \hyperpage{23}
+    \subitem {\+\_\+x\+\_\+base}, \hyperpage{23}
+    \subitem {\+\_\+y\+\_\+base}, \hyperpage{23}
+    \subitem {fix}, \hyperpage{22}
+    \subitem {output}, \hyperpage{22}
+    \subitem {theta}, \hyperpage{24}
+    \subitem {theta\+\_\+std}, \hyperpage{24}
+    \subitem {update}, \hyperpage{23}
+    \subitem {x}, \hyperpage{24}
+    \subitem {x\+\_\+std}, \hyperpage{24}
+    \subitem {y}, \hyperpage{24}
+    \subitem {y\+\_\+std}, \hyperpage{24}
+  \item {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{40}
+    \subitem {output}, \hyperpage{41}
+    \subitem {theta}, \hyperpage{41}
+    \subitem {theta\+\_\+std}, \hyperpage{41}
+    \subitem {update}, \hyperpage{41}
+    \subitem {x}, \hyperpage{42}
+    \subitem {x\+\_\+std}, \hyperpage{42}
+    \subitem {y}, \hyperpage{42}
+    \subitem {y\+\_\+std}, \hyperpage{42}
+  \item {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{43}
+    \subitem {output}, \hyperpage{43}
+    \subitem {theta}, \hyperpage{44}
+    \subitem {theta\+\_\+std}, \hyperpage{44}
+    \subitem {x}, \hyperpage{44}
+    \subitem {x\+\_\+std}, \hyperpage{44}
+    \subitem {y}, \hyperpage{44}
+    \subitem {y\+\_\+std}, \hyperpage{44}
+  \item {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{51}
+    \subitem {choice}, \hyperpage{52}
+    \subitem {fuse\+\_\+tf}, \hyperpage{52}
+    \subitem {output}, \hyperpage{51}
+    \subitem {set\+\_\+map}, \hyperpage{52}
+    \subitem {set\+\_\+odom}, \hyperpage{52}
+    \subitem {theta}, \hyperpage{52}
+    \subitem {theta\+\_\+choice}, \hyperpage{53}
+    \subitem {x}, \hyperpage{53}
+    \subitem {x\+\_\+choice}, \hyperpage{53}
+    \subitem {y}, \hyperpage{53}
+    \subitem {y\+\_\+choice}, \hyperpage{53}
+  \item {fuse\+\_\+\+G\+\_\+A}, \hyperpage{7}
+    \subitem {amcl\+\_\+pose}, \hyperpage{10}
+    \subitem {gps\+\_\+pose}, \hyperpage{10}
+    \subitem {listener}, \hyperpage{10}
+    \subitem {M\+A\+X\+\_\+\+S\+TD}, \hyperpage{10}
+    \subitem {make\+\_\+choice}, \hyperpage{8}
+    \subitem {matrix\+\_\+from\+\_\+theta}, \hyperpage{8}
+    \subitem {normalization}, \hyperpage{8}
+    \subitem {odom\+\_\+pose}, \hyperpage{10}
+    \subitem {out\+\_\+pose}, \hyperpage{11}
+    \subitem {pub}, \hyperpage{11}
+    \subitem {send\+Transform}, \hyperpage{9}
+    \subitem {t1}, \hyperpage{11}
+    \subitem {t2}, \hyperpage{11}
+    \subitem {tf\+Buffer}, \hyperpage{11}
+    \subitem {theta\+\_\+from\+\_\+matrix}, \hyperpage{9}
+    \subitem {tran\+\_\+mat44}, \hyperpage{9}
+    \subitem {tran\+\_\+theta\+\_\+T}, \hyperpage{10}
+  \item {fuse\+\_\+encoder}
+    \subitem {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{31}
+  \item {fuse\+\_\+gps}
+    \subitem {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{32}
+  \item {fuse\+\_\+gps\+\_\+odom}
+    \subitem {serial\+\_\+af}, \hyperpage{20}
+  \item {fuse\+\_\+gps\+\_\+odom\+\_\+msg}
+    \subitem {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{32}
+  \item {fuse\+\_\+tf}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{52}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{49}
+
+  \indexspace
+
+  \item {gps\+\_\+pose}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+  \item {gps\+\_\+time}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{34}
+
+  \indexspace
+
+  \item {hdg\+\_\+std}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{34}
+  \item {heading}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{34}
+  \item {hgt}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{34}
+  \item {hgt\+\_\+std}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+  \item {hor\+\_\+spd}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+
+  \indexspace
+
+  \item {lat}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+  \item {lat\+\_\+std}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+  \item {left\+\_\+encoder\+\_\+val}
+    \subitem {serial\+\_\+af\+::\+Encoder}, \hyperpage{30}
+  \item {listener}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+  \item {lock}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{26}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{38}
+  \item {lon}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+  \item {lon\+\_\+std}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{35}
+
+  \indexspace
+
+  \item {M\+A\+X\+\_\+\+S\+TD}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+    \subitem {select\+\_\+A}, \hyperpage{17}
+  \item {main}
+    \subitem {select\+\_\+A}, \hyperpage{14}
+    \subitem {serial\+\_\+af}, \hyperpage{18}
+  \item {make\+\_\+choice}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{8}
+    \subitem {select\+\_\+A}, \hyperpage{14}
+  \item {matrix\+\_\+from\+\_\+theta}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{8}
+    \subitem {select\+\_\+A}, \hyperpage{14}
+  \item {mutex}
+    \subitem {serial\+\_\+af}, \hyperpage{20}
+
+  \indexspace
+
+  \item {normalization}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{8}
+  \item {normalize}
+    \subitem {select\+\_\+A}, \hyperpage{15}
+
+  \indexspace
+
+  \item {odom\+\_\+pose}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+  \item {out\+\_\+pose}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{11}
+  \item {output}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{22}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{41}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{43}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{51}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{26}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{38}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{46}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{48}
+
+  \indexspace
+
+  \item {plot}
+    \subitem {serial\+\_\+af\+::\+Encoder}, \hyperpage{30}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{34}
+  \item {Pos\+\_\+type}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+  \item {pub}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{11}
+
+  \indexspace
+
+  \item {range\+\_\+pub}
+    \subitem {serial\+\_\+af}, \hyperpage{18}
+  \item {right\+\_\+encoder\+\_\+val}
+    \subitem {serial\+\_\+af\+::\+Encoder}, \hyperpage{30}
+
+  \indexspace
+
+  \item {S\+T\+A\+T\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+A\+N\+G\+U\+L\+AR}
+    \subitem {select\+\_\+A}, \hyperpage{17}
+  \item {S\+T\+A\+T\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+L\+I\+N\+E\+AR}
+    \subitem {select\+\_\+A}, \hyperpage{17}
+  \item {S\+Vs}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+  \item {select\+\_\+\+A.\+A\+M\+C\+L\+\_\+unit}, \hyperpage{25}
+  \item {select\+\_\+\+A.\+G\+P\+S\+\_\+unit}, \hyperpage{37}
+  \item {select\+\_\+\+A.\+Odom\+\_\+unit}, \hyperpage{45}
+  \item {select\+\_\+\+A.\+py}, \hyperpage{56}
+  \item {select\+\_\+\+A.\+S\+E\+L\+E\+C\+T\+ED}, \hyperpage{47}
+  \item {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{26}
+    \subitem {\+\_\+theta\+\_\+base}, \hyperpage{27}
+    \subitem {\+\_\+x\+\_\+base}, \hyperpage{27}
+    \subitem {\+\_\+y\+\_\+base}, \hyperpage{27}
+    \subitem {fix}, \hyperpage{26}
+    \subitem {lock}, \hyperpage{26}
+    \subitem {output}, \hyperpage{26}
+    \subitem {theta}, \hyperpage{28}
+    \subitem {theta\+\_\+std}, \hyperpage{28}
+    \subitem {update}, \hyperpage{27}
+    \subitem {x}, \hyperpage{28}
+    \subitem {x\+\_\+std}, \hyperpage{28}
+    \subitem {y}, \hyperpage{28}
+    \subitem {y\+\_\+std}, \hyperpage{28}
+  \item {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{38}
+    \subitem {lock}, \hyperpage{38}
+    \subitem {output}, \hyperpage{38}
+    \subitem {theta}, \hyperpage{39}
+    \subitem {theta\+\_\+std}, \hyperpage{39}
+    \subitem {update}, \hyperpage{38}
+    \subitem {x}, \hyperpage{39}
+    \subitem {x\+\_\+std}, \hyperpage{39}
+    \subitem {y}, \hyperpage{39}
+    \subitem {y\+\_\+std}, \hyperpage{39}
+  \item {select\+\_\+\+A\+::\+Odom\+\_\+unit}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{45}
+    \subitem {output}, \hyperpage{46}
+    \subitem {theta}, \hyperpage{46}
+    \subitem {theta\+\_\+std}, \hyperpage{46}
+    \subitem {x}, \hyperpage{46}
+    \subitem {x\+\_\+std}, \hyperpage{46}
+    \subitem {y}, \hyperpage{47}
+    \subitem {y\+\_\+std}, \hyperpage{47}
+  \item {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{48}
+    \subitem {choice}, \hyperpage{49}
+    \subitem {fuse\+\_\+tf}, \hyperpage{49}
+    \subitem {output}, \hyperpage{48}
+    \subitem {set\+\_\+map}, \hyperpage{48}
+    \subitem {set\+\_\+odom}, \hyperpage{49}
+    \subitem {theta}, \hyperpage{49}
+    \subitem {theta\+\_\+choice}, \hyperpage{49}
+    \subitem {x}, \hyperpage{50}
+    \subitem {x\+\_\+choice}, \hyperpage{50}
+    \subitem {y}, \hyperpage{50}
+    \subitem {y\+\_\+choice}, \hyperpage{50}
+  \item {select\+\_\+A}, \hyperpage{11}
+    \subitem {amcl\+\_\+global\+\_\+update}, \hyperpage{12}
+    \subitem {amcl\+\_\+initial\+\_\+callback}, \hyperpage{13}
+    \subitem {amcl\+\_\+initial\+\_\+update}, \hyperpage{13}
+    \subitem {amcl\+\_\+nomotion\+\_\+update}, \hyperpage{13}
+    \subitem {amcl\+\_\+process}, \hyperpage{13}
+    \subitem {amcl\+\_\+recovery}, \hyperpage{14}
+    \subitem {angle\+\_\+diff}, \hyperpage{14}
+    \subitem {flag\+\_\+robot\+\_\+move}, \hyperpage{16}
+    \subitem {M\+A\+X\+\_\+\+S\+TD}, \hyperpage{17}
+    \subitem {main}, \hyperpage{14}
+    \subitem {make\+\_\+choice}, \hyperpage{14}
+    \subitem {matrix\+\_\+from\+\_\+theta}, \hyperpage{14}
+    \subitem {normalize}, \hyperpage{15}
+    \subitem {S\+T\+A\+T\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+A\+N\+G\+U\+L\+AR}, 
+		\hyperpage{17}
+    \subitem {S\+T\+A\+T\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+L\+I\+N\+E\+AR}, 
+		\hyperpage{17}
+    \subitem {send\+Transform}, \hyperpage{15}
+    \subitem {theta\+\_\+from\+\_\+matrix}, \hyperpage{15}
+    \subitem {tran\+\_\+mat44}, \hyperpage{16}
+    \subitem {tran\+\_\+theta\+\_\+T}, \hyperpage{16}
+  \item {send\+Transform}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{9}
+    \subitem {select\+\_\+A}, \hyperpage{15}
+  \item {serial\+\_\+af}, \hyperpage{17}
+    \subitem {crc\+\_\+novetal}, \hyperpage{19}
+    \subitem {fuse\+\_\+gps\+\_\+odom}, \hyperpage{20}
+    \subitem {main}, \hyperpage{18}
+    \subitem {mutex}, \hyperpage{20}
+    \subitem {range\+\_\+pub}, \hyperpage{18}
+    \subitem {serial\+\_\+process}, \hyperpage{18}
+    \subitem {sound\+\_\+range}, \hyperpage{20}
+    \subitem {sound\+\_\+range\+\_\+init}, \hyperpage{19}
+    \subitem {sound\+\_\+seq}, \hyperpage{20}
+  \item {serial\+\_\+af.\+Encoder}, \hyperpage{29}
+  \item {serial\+\_\+af.\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}, 
+		\hyperpage{30}
+  \item {serial\+\_\+af.\+G\+PS}, \hyperpage{32}
+  \item {serial\+\_\+af.\+py}, \hyperpage{57}
+  \item {serial\+\_\+af\+::\+Encoder}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{29}
+    \subitem {encoder\+\_\+time}, \hyperpage{30}
+    \subitem {left\+\_\+encoder\+\_\+val}, \hyperpage{30}
+    \subitem {plot}, \hyperpage{30}
+    \subitem {right\+\_\+encoder\+\_\+val}, \hyperpage{30}
+  \item {serial\+\_\+af\+::\+Fuse\+\_\+\+G\+P\+S\+\_\+\+Odom}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{31}
+    \subitem {fill}, \hyperpage{31}
+    \subitem {fuse\+\_\+encoder}, \hyperpage{31}
+    \subitem {fuse\+\_\+gps}, \hyperpage{32}
+    \subitem {fuse\+\_\+gps\+\_\+odom\+\_\+msg}, \hyperpage{32}
+  \item {serial\+\_\+af\+::\+G\+PS}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{33}
+    \subitem {gps\+\_\+time}, \hyperpage{34}
+    \subitem {hdg\+\_\+std}, \hyperpage{34}
+    \subitem {heading}, \hyperpage{34}
+    \subitem {hgt}, \hyperpage{34}
+    \subitem {hgt\+\_\+std}, \hyperpage{35}
+    \subitem {hor\+\_\+spd}, \hyperpage{35}
+    \subitem {lat}, \hyperpage{35}
+    \subitem {lat\+\_\+std}, \hyperpage{35}
+    \subitem {lon}, \hyperpage{35}
+    \subitem {lon\+\_\+std}, \hyperpage{35}
+    \subitem {plot}, \hyperpage{34}
+    \subitem {Pos\+\_\+type}, \hyperpage{36}
+    \subitem {S\+Vs}, \hyperpage{36}
+    \subitem {Slo\+\_\+stat}, \hyperpage{36}
+    \subitem {soln\+S\+Vs}, \hyperpage{36}
+    \subitem {Trk\+\_\+gnd}, \hyperpage{36}
+    \subitem {Vert\+\_\+spd}, \hyperpage{36}
+  \item {serial\+\_\+process}
+    \subitem {serial\+\_\+af}, \hyperpage{18}
+  \item {set\+\_\+map}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{52}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{48}
+  \item {set\+\_\+odom}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{52}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{49}
+  \item {Slo\+\_\+stat}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+  \item {soln\+S\+Vs}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+  \item {sound\+\_\+range}
+    \subitem {serial\+\_\+af}, \hyperpage{20}
+  \item {sound\+\_\+range\+\_\+init}
+    \subitem {serial\+\_\+af}, \hyperpage{19}
+  \item {sound\+\_\+seq}
+    \subitem {serial\+\_\+af}, \hyperpage{20}
+
+  \indexspace
+
+  \item {t1}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{11}
+  \item {t2}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{11}
+  \item {tf\+Buffer}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{11}
+  \item {theta}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{41}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{52}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{46}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{49}
+  \item {theta\+\_\+choice}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{53}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{49}
+  \item {theta\+\_\+from\+\_\+matrix}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{9}
+    \subitem {select\+\_\+A}, \hyperpage{15}
+  \item {theta\+\_\+std}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{41}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{46}
+  \item {tran\+\_\+mat44}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{9}
+    \subitem {select\+\_\+A}, \hyperpage{16}
+  \item {tran\+\_\+theta\+\_\+T}
+    \subitem {fuse\+\_\+\+G\+\_\+A}, \hyperpage{10}
+    \subitem {select\+\_\+A}, \hyperpage{16}
+  \item {Trk\+\_\+gnd}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+
+  \indexspace
+
+  \item {update}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{23}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{41}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{27}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{38}
+
+  \indexspace
+
+  \item {Vert\+\_\+spd}
+    \subitem {serial\+\_\+af\+::\+G\+PS}, \hyperpage{36}
+
+  \indexspace
+
+  \item {x}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{42}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{53}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{46}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{50}
+  \item {x\+\_\+choice}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{53}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{50}
+  \item {x\+\_\+std}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{42}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{46}
+
+  \indexspace
+
+  \item {y}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{42}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{53}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{47}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{50}
+  \item {y\+\_\+choice}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{53}
+    \subitem {select\+\_\+\+A\+::\+S\+E\+L\+E\+C\+T\+ED}, 
+		\hyperpage{50}
+  \item {y\+\_\+std}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{24}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, 
+		\hyperpage{42}
+    \subitem {fuse\+\_\+\+G\+\_\+\+A\+::\+Odom\+\_\+unit}, 
+		\hyperpage{44}
+    \subitem {select\+\_\+\+A\+::\+A\+M\+C\+L\+\_\+unit}, 
+		\hyperpage{28}
+    \subitem {select\+\_\+\+A\+::\+G\+P\+S\+\_\+unit}, \hyperpage{39}
+    \subitem {select\+\_\+\+A\+::\+Odom\+\_\+unit}, \hyperpage{47}
+
+\end{theindex}
