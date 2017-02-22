@@ -9,11 +9,10 @@
 #include <af_bringup/testConfig.h>
 
 //goal:subscribe the car_speed, then send them 
-
+ 
 double left_fix_;
 double right_fix_;
 double length_;
-
 
 class SubscribeAndPublish  
 {  
@@ -27,15 +26,14 @@ public:
      vx_ = 0.0;  
      vy_ = 0.0;  
      vth_ = 0.0;
-     theta_ = 0.0;
      current_time_ = ros::Time::now();  
      last_time_ = ros::Time::now();  
     //Topic you want to publish  
     
-    pub_ = n_.advertise<nav_msgs::Odometry>("odom", 100);  
+    pub_ = n_.advertise<nav_msgs::Odometry>("odom", 10);  
   
     //Topic you want to subscribe  
-    sub_ = n_.subscribe("robot_encode_val", 100, &SubscribeAndPublish::callback, this);  
+    sub_ = n_.subscribe("robot_encode_val", 10, &SubscribeAndPublish::callback, this);  
   }  
   
   void callback(const af_bringup::Robot_encode::ConstPtr& input)
@@ -47,7 +45,6 @@ public:
 
     thetaL = input->left_encode;
     thetaR = input->right_encode;
-    theta_ = -1.0 * input->theta*PI/180.0;
     //thetaL = thetaL/32;
     //thetaR = thetaR/32;
 
@@ -79,8 +76,8 @@ public:
 
 
     //next, we'll publish the odometry message over ROS 
-    double dt = (current_time_ - last_time_).toSec(); 
-    dt = 0.01;
+    double dt = (current_time_ - last_time_).toSec();
+    dt = 0.01; 
     vx_ = m_actualOdom.m_tranX/dt;  
     vy_ = m_actualOdom.m_tranY/dt;  
     vth_ = m_actualOdom.m_rotation/dt;
@@ -105,16 +102,7 @@ public:
     odom.child_frame_id = "base_footprint"; 
     odom.twist.twist.linear.x = (thetaL+thetaR)*PulseToDistance/2.0/dt;  
     odom.twist.twist.linear.y = 0;  
-    //odom.twist.twist.angular.z = vth_;  
-    ROS_INFO("linear: %f, theta: %f",odom.twist.twist.linear.x ,theta_);
-    if (fabs(odom.twist.twist.linear.x) <= 0.001) {
-      linear_ = 0.0;
-    }
-    else
-    {
-      linear_ =  odom.twist.twist.linear.x;
-    }
-    odom.twist.twist.angular.z = linear_ * tan(theta_) / 0.581; 
+    odom.twist.twist.angular.z = vth_;  
     odom.twist.covariance = odom.pose.covariance;
 
     //publish the message  
@@ -136,9 +124,7 @@ private:
   double thetaR;
   double vx_;  
   double vy_ ;  
-  double vth_ ;
-  double theta_; 
-  double linear_;
+  double vth_ ; 
   
   ActualOdom m_actualOdom;
   tf::TransformBroadcaster odom_broadcaster;
@@ -156,6 +142,9 @@ void callback(af_bringup::testConfig &config, uint32_t level) {
             left_fix_, right_fix_);
 }
   
+  
+
+  
 int main(int argc, char **argv)  
 {  
   //Initiate ROS  
@@ -170,7 +159,7 @@ int main(int argc, char **argv)
   
   f = boost::bind(&callback, _1, _2);
   server.setCallback(f);
-  
+
   ros::spin();  
   
   return 0;  

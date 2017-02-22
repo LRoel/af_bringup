@@ -19,8 +19,8 @@ ActualOdom::ActualOdom()
 	m_inverQ = 0.0;
 
     //m_radius = 0.1524/2;    //轮子直径120mm
-	m_radius = 0.430/2;
-	m_length = 0.710;   //中心轴距424mm
+	m_radius = 0.1016/2;
+	m_length = 0.5370;   //中心轴距424mm
 	//m_radius = 0.420/2;    //轮子直径120mm
 	//m_length = 0.700;   //中心轴距424mm
 
@@ -62,7 +62,7 @@ void ActualOdom::inverse()
 //计算运动位移
 void ActualOdom::cal_motion(double thetaL, double thetaR, double thetaYaw)
 {
-
+  
   double l_tran = left_fix_ * thetaL * PulseToDistance;
   double r_tran = right_fix_ * thetaR * PulseToDistance;
   
@@ -77,11 +77,11 @@ void ActualOdom::cal_motion(double thetaL, double thetaR, double thetaYaw)
 	/*if (m_rotation < IMU_ZERO_VALUE)  //若运动量过小，以里程计为准，否则以IMU为准。
 	{
 		m_rotation = m_rotation * 180.0/ PI;
-	}
+	} 
 	else
 	{
 		m_rotation = thetaYaw;
-	}*/
+	}*/	
 }
 
 void ActualOdom::sumTranslation()

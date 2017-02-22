@@ -6,12 +6,13 @@
 
 #define   IMU_ZERO_VALUE 0.5
 #define   PI 3.14159265358979
-//#define   PulseToDistance  PI*0.1524/2000    //单位脉冲数所对应的距离，电机每转动一周所对应的脉冲数为16384
-#define PulseToDistance  PI*0.430/(4000*32) // 32 jiansubi
+#define   PulseToDistance  PI*0.1016/2000    //单位脉冲数所对应的距离，电机每转动一周所对应的脉冲数为16384
+//#define PulseToDistance  PI*0.688/(4000*32) // 32 jiansubi 
 //#define   PulseToDistance  PI*0.420/4096
 
 
 //#define   PulsePerRad 2601.865
+
 
 class ActualOdom
 {
@@ -24,7 +25,7 @@ public:
 	void inverse();
 	void sumTranslation();
         void printModel();
-
+	
 public:
     //机器人运动位移
    	double m_tranX;
@@ -43,7 +44,9 @@ public:
 
         double m_radius;
         double m_length;
-
+    
     //编码器角速度阈值
     //double m_angleVelThreshold;
 };
+
+
