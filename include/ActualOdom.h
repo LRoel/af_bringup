@@ -21,10 +21,10 @@ public:
 	virtual ~ActualOdom();
 
 public:
-        void cal_motion(double thetaL, double thetaR, double yaw);
+    void cal_motion(double thetaL, double thetaR, double yaw);
 	void inverse();
 	void sumTranslation();
-        void printModel();
+    void printModel();
 	
 public:
     //机器人运动位移
@@ -33,17 +33,17 @@ public:
 	double m_rotation;
 
     //机器人实时位姿
-        double m_sumX;
+	double m_sumX;
 	double m_sumY;
 	double m_sumQ;
 
     //机器人位姿取逆
-        double m_inverX;
+	double m_inverX;
 	double m_inverY;
 	double m_inverQ;
 
-        double m_radius;
-        double m_length;
+	double m_radius;
+	double m_length;
     
     //编码器角速度阈值
     //double m_angleVelThreshold;
