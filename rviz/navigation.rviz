@@ -88,33 +88,19 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        Stereo:
-          Value: false
         base_footprint:
           Value: true
         base_link:
+          Value: true
+        gps:
+          Value: true
+        imu:
           Value: true
         laser:
           Value: false
         map:
           Value: true
         odom:
-          Value: true
-        range1:
-          Value: true
-        range2:
-          Value: true
-        range3:
-          Value: true
-        range4:
-          Value: true
-        range5:
-          Value: true
-        range6:
-          Value: true
-        range7:
-          Value: true
-        range8:
           Value: true
         wheel1:
           Value: false
@@ -134,25 +120,11 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                Stereo:
+                gps:
+                  {}
+                imu:
                   {}
                 laser:
-                  {}
-                range1:
-                  {}
-                range2:
-                  {}
-                range3:
-                  {}
-                range4:
-                  {}
-                range5:
-                  {}
-                range6:
-                  {}
-                range7:
-                  {}
-                range8:
                   {}
                 wheel1:
                   {}
@@ -179,9 +151,9 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: true
       Max Color: 255; 0; 0
-      Max Intensity: 3426
+      Max Intensity: 1109
       Min Color: 255; 0; 0
-      Min Intensity: 217
+      Min Intensity: 395
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -230,7 +202,7 @@ Visualization Manager:
       Draw Behind: false
       Enabled: true
       Name: Map
-      Topic: /map
+      Topic: /map_amcl
       Unreliable: false
       Value: true
     - Class: rviz/Group
@@ -374,11 +346,11 @@ Visualization Manager:
     - Arrow Length: 0.2
       Class: rviz/PoseArray
       Color: 0; 192; 0
-      Enabled: false
+      Enabled: true
       Name: Amcl Particle Swarm
       Topic: /particlecloud
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -712,11 +684,11 @@ Visualization Manager:
         Value: false
       Name: Current View
       Near Clip Distance: 0.01
-      Scale: 165.645
+      Scale: 66.3598
       Target Frame: map
       Value: TopDownOrtho (rviz)
-      X: -2.53655
-      Y: -0.923238
+      X: 5.58086
+      Y: 1.93866
     Saved: ~
 Window Geometry:
   Displays:
@@ -724,7 +696,7 @@ Window Geometry:
   Height: 1056
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a000003dafc0200000005fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000003da000000dd00ffffff000000010000010f000003dafc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000003da000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000004ba000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a000003dafc0200000005fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed0000034800000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000003da000000dd00ffffff000000010000010f000003dafc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000003da000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000004ba000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -735,4 +707,4 @@ Window Geometry:
     collapsed: false
   Width: 1855
   X: 65
-  Y: 24
+  Y: 864
