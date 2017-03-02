@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libaf_serial.so -o devel/lib/libaf_serial.so CMakeFiles/af_serial.dir/src/af_bringup/UartDriver.cpp.o 

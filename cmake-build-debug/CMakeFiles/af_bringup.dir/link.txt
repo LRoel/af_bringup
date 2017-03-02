@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libaf_bringup.so -o devel/lib/libaf_bringup.so CMakeFiles/af_bringup.dir/src/af_bringup/ActualOdom.cpp.o CMakeFiles/af_bringup.dir/src/af_bringup/_Matrix.cpp.o 

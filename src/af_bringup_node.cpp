@@ -1,12 +1,19 @@
 #include <ros/ros.h>  
 #include <tf/transform_broadcaster.h>  
 #include <nav_msgs/Odometry.h>  
-#include <af_bringup/Robot_encode.h>  
+#include <af_msgs/Robot_encode.h>  
 #include "ActualOdom.h"
 #include <math.h>
 
 #include <dynamic_reconfigure/server.h>
 #include <af_bringup/testConfig.h>
+
+#include <message_filters/subscriber.h>
+#include <message_filters/synchronizer.h>
+#include <message_filters/sync_policies/approximate_time.h>
+#include <sensor_msgs/Imu.h>
+
+using namespace message_filters;
 
 //goal:subscribe the car_speed, then send them
 
@@ -27,18 +34,17 @@ public:
      vx_ = 0.0;  
      vy_ = 0.0;  
      vth_ = 0.0;
-     theta_ = 0.0;
      current_time_ = ros::Time::now();  
      last_time_ = ros::Time::now();  
-    //Topic you want to publish  
-    
-    pub_ = n_.advertise<nav_msgs::Odometry>("odom", 100);  
-  
-    //Topic you want to subscribe  
-    sub_ = n_.subscribe("robot_encode_val", 100, &SubscribeAndPublish::callback, this);  
+    //Topic you want to publish
+
+    pub_ = n_.advertise<nav_msgs::Odometry>("odom", 100);
+
+    //Topic you want to subscribe
+    sub_ = n_.subscribe("imu_encode", 100, &SubscribeAndPublish::callback, this);
   }  
   
-  void callback(const af_bringup::Robot_encode::ConstPtr& input)
+  void callback(const af_msgs::Robot_encode::ConstPtr& input)
   {  
     //nav_msgs::Odometry output;  
     //.... do something with the input and generate the output... 
@@ -47,14 +53,15 @@ public:
 
     thetaL = input->left_encode;
     thetaR = input->right_encode;
-    theta_ = input->theta*PI/180.0;
+    theta_imu_ = input->theta;
+
     //thetaL = thetaL/32;
     //thetaR = thetaR/32;
 
 
     //printf("encoderValue_L = %d, encoderValue_R = %d \r\n",input->left_encode,input->right_encode);
 
-    m_actualOdom.cal_motion(thetaL, thetaR, 0.0);
+    m_actualOdom.cal_motion(thetaL, thetaR, theta_imu_);
     m_actualOdom.sumTranslation();
     //m_actualOdom.printModel(); 
 	
@@ -105,13 +112,7 @@ public:
     odom.child_frame_id = "base_footprint"; 
     odom.twist.twist.linear.x = (thetaL+thetaR)*PulseToDistance/2.0/dt;  
     odom.twist.twist.linear.y = 0;  
-    //odom.twist.twist.angular.z = vth_;  
-    ROS_INFO("linear: %f, theta: %f",odom.twist.twist.linear.x ,theta_);
-//    if (fabs(odom.twist.twist.linear.x) <= 0.025){
-//        odom.twist.twist.linear.x = 0.0;
-//        odom.twist.twist.angular.z = 0.0;
-//    }
-    odom.twist.twist.angular.z = odom.twist.twist.linear.x * tan(theta_) / 0.581; 
+    odom.twist.twist.angular.z = vth_;
     odom.twist.covariance = odom.pose.covariance;
 
     //publish the message  
@@ -134,8 +135,7 @@ private:
   double vx_;  
   double vy_ ;  
   double vth_ ;
-  double theta_; 
-  double linear_;
+    double theta_imu_;
   
   ActualOdom m_actualOdom;
   tf::TransformBroadcaster odom_broadcaster;
@@ -156,19 +156,19 @@ void callback(af_bringup::testConfig &config, uint32_t level) {
 int main(int argc, char **argv)  
 {  
   //Initiate ROS  
-  ros::init(argc, argv, "odometry_publisher");  
-  
-  //dynamic_test
-  dynamic_reconfigure::Server<af_bringup::testConfig> server;
-  dynamic_reconfigure::Server<af_bringup::testConfig>::CallbackType f;
+    ros::init(argc, argv, "odometry_publisher");
 
+    //dynamic_test
+    dynamic_reconfigure::Server<af_bringup::testConfig> server;
+    dynamic_reconfigure::Server<af_bringup::testConfig>::CallbackType f;
+
+    ros::NodeHandle nh;
   //Create an object of class SubscribeAndPublish that will take care of everything
-  SubscribeAndPublish SAPObject;  
-  
-  f = boost::bind(&callback, _1, _2);
-  server.setCallback(f);
+    SubscribeAndPublish SAPObject;
+    f = boost::bind(&callback, _1, _2);
+    server.setCallback(f);
 
-  ros::spin();
+    ros::spin();
   
-  return 0;  
+    return 0;
 } 

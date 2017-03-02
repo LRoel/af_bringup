@@ -1,0 +1,36 @@
+/home/ros/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ros/catkin_test/src/af_bringup
+-- Using CATKIN_DEVEL_PREFIX: /home/ros/catkin_test/src/af_bringup/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/ros/catkin_google/install_isolated;/home/ros/novatel_ws/devel;/home/ros/catkin_test/devel;/opt/ros/indigo
+-- This workspace overlays: /home/ros/catkin_google/install_isolated;/home/ros/novatel_ws/devel;/home/ros/catkin_test/devel;/opt/ros/indigo
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/ros/catkin_test/src/af_bringup/cmake-build-debug/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.18
+-- Using these message generators: gencpp;genlisp;genpy
+-- af_bringup: 2 messages, 0 services
+CMake Warning at /opt/ros/indigo/share/catkin/cmake/catkin_package.cmake:409 (message):
+  catkin_package() include dir
+  '/home/ros/catkin_test/src/af_bringup/cmake-build-debug/devel/include'
+  should be placed in the devel space instead of the build space
+Call Stack (most recent call first):
+  /opt/ros/indigo/share/catkin/cmake/catkin_package.cmake:98 (_catkin_package)
+  CMakeLists.txt:112 (catkin_package)
+
+
+CMake Warning at /opt/ros/indigo/share/catkin/cmake/catkin_package.cmake:409 (message):
+  catkin_package() include dir
+  '/home/ros/catkin_test/src/af_bringup/cmake-build-debug/devel/include'
+  should be placed in the devel space instead of the build space
+Call Stack (most recent call first):
+  /opt/ros/indigo/share/catkin/cmake/catkin_package.cmake:98 (_catkin_package)
+  CMakeLists.txt:112 (catkin_package)
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ros/catkin_test/src/af_bringup/cmake-build-debug

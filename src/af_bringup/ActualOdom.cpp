@@ -63,16 +63,17 @@ void ActualOdom::inverse()
 void ActualOdom::cal_motion(double thetaL, double thetaR, double thetaYaw)
 {
   
-  double l_tran = left_fix_ * thetaL * PulseToDistance;
-  double r_tran = right_fix_ * thetaR * PulseToDistance;
+  	double l_tran = left_fix_ * thetaL * PulseToDistance;
+  	double r_tran = right_fix_ * thetaR * PulseToDistance;
   
 	m_tranX = (l_tran+r_tran)*cos(+m_sumQ)/2.0;
 	m_tranY = (l_tran+r_tran)*sin(+m_sumQ)/2.0;
 	
 	ROS_INFO("set configure: %f %f", 
             left_fix_, right_fix_);
-    
-	m_rotation = (r_tran - l_tran)/length_;
+
+    m_rotation = thetaYaw;
+	//m_rotation = (r_tran - l_tran)/length_;
 
 	/*if (m_rotation < IMU_ZERO_VALUE)  //若运动量过小，以里程计为准，否则以IMU为准。
 	{
