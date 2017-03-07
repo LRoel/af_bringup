@@ -1,14 +1,14 @@
 #include <ros/ros.h>  
 #include <tf/transform_broadcaster.h>  
 #include <nav_msgs/Odometry.h>  
-#include <af_msgs/Robot_encode.h>  
+#include <af_bringup/Robot_encode.h>  
 #include "ActualOdom.h"
 #include <math.h>
 
 #include <dynamic_reconfigure/server.h>
 #include <af_bringup/testConfig.h>
 
-//goal:subscribe the car_speed, then send them
+//goal:subscribe the car_speed, then send them 
 
 double left_fix_;
 double right_fix_;
@@ -38,7 +38,7 @@ public:
     sub_ = n_.subscribe("robot_encode_val", 100, &SubscribeAndPublish::callback, this);  
   }  
   
-  void callback(const af_msgs::Robot_encode::ConstPtr& input)
+  void callback(const af_bringup::Robot_encode::ConstPtr& input)
   {  
     //nav_msgs::Odometry output;  
     //.... do something with the input and generate the output... 
@@ -47,7 +47,7 @@ public:
 
     thetaL = input->left_encode;
     thetaR = input->right_encode;
-    theta_ = input->theta*PI/180.0;
+    theta_ = -1.0 * input->theta*PI/180.0;
     //thetaL = thetaL/32;
     //thetaR = thetaR/32;
 
@@ -107,11 +107,14 @@ public:
     odom.twist.twist.linear.y = 0;  
     //odom.twist.twist.angular.z = vth_;  
     ROS_INFO("linear: %f, theta: %f",odom.twist.twist.linear.x ,theta_);
-//    if (fabs(odom.twist.twist.linear.x) <= 0.025){
-//        odom.twist.twist.linear.x = 0.0;
-//        odom.twist.twist.angular.z = 0.0;
-//    }
-    odom.twist.twist.angular.z = odom.twist.twist.linear.x * tan(theta_) / 0.581; 
+    if (fabs(odom.twist.twist.linear.x) <= 0.001) {
+      linear_ = 0.0;
+    }
+    else
+    {
+      linear_ =  odom.twist.twist.linear.x;
+    }
+    odom.twist.twist.angular.z = linear_ * tan(theta_) / 0.581; 
     odom.twist.covariance = odom.pose.covariance;
 
     //publish the message  
@@ -144,15 +147,15 @@ private:
 
 
 void callback(af_bringup::testConfig &config, uint32_t level) {
-  ROS_INFO("Reconfigure Request: %f %f",
+  ROS_INFO("Reconfigure Request: %f %f", 
             config.left_fix, config.right_fix);
   left_fix_ = config.left_fix;
   right_fix_ = config.right_fix;
   length_ = config.length;
-  ROS_INFO("get configure: %f %f",
+  ROS_INFO("get configure: %f %f", 
             left_fix_, right_fix_);
 }
-
+  
 int main(int argc, char **argv)  
 {  
   //Initiate ROS  
@@ -161,14 +164,14 @@ int main(int argc, char **argv)
   //dynamic_test
   dynamic_reconfigure::Server<af_bringup::testConfig> server;
   dynamic_reconfigure::Server<af_bringup::testConfig>::CallbackType f;
-
-  //Create an object of class SubscribeAndPublish that will take care of everything
+  
+  //Create an object of class SubscribeAndPublish that will take care of everything  
   SubscribeAndPublish SAPObject;  
   
   f = boost::bind(&callback, _1, _2);
   server.setCallback(f);
-
-  ros::spin();
+  
+  ros::spin();  
   
   return 0;  
 } 

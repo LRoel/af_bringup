@@ -1,7 +1,7 @@
 #include <ros/ros.h>  
 #include <tf/transform_broadcaster.h>  
 #include <nav_msgs/Odometry.h>  
-#include <af_msgs/Robot_encode.h>  
+#include <af_bringup/Robot_encode.h>  
 #include "ActualOdom.h"
 #include <math.h>
 
@@ -38,7 +38,7 @@ public:
     sub_ = n_.subscribe("robot_encode_val", 100, &SubscribeAndPublish::callback, this);  
   }  
   
-  void callback(const af_msgs::Robot_encode::ConstPtr& input)
+  void callback(const af_bringup::Robot_encode::ConstPtr& input)
   {  
     //nav_msgs::Odometry output;  
     //.... do something with the input and generate the output... 

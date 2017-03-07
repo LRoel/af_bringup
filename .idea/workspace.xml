@@ -2,68 +2,70 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
-      <config projectName="af_bringup" targetName="af_bringup_node" />
-      <config projectName="af_bringup" targetName="gtest" />
-      <config projectName="af_bringup" targetName="gtest_main" />
-      <config projectName="af_bringup" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="af_bringup_genpy" />
-      <config projectName="af_bringup" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="af_bringup_generate_messages" />
-      <config projectName="af_bringup" targetName="af_bringup_generate_messages_py" />
-      <config projectName="af_bringup" targetName="af_serial" />
-      <config projectName="af_bringup" targetName="download_extra_data" />
-      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="af_bringup" targetName="tests" />
-      <config projectName="af_bringup" targetName="af_bringup_gencfg" />
-      <config projectName="af_bringup" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="af_bringup_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="_af_bringup_generate_messages_check_deps_af_navMsg" />
-      <config projectName="af_bringup" targetName="tf_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="tf_generate_messages_lisp" />
       <config projectName="af_bringup" targetName="af_serial_node" />
-      <config projectName="af_bringup" targetName="_af_bringup_generate_messages_check_deps_Robot_encode" />
-      <config projectName="af_bringup" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="af_bringup" targetName="af_bringup_genlisp" />
-      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="af_bringup_gencpp" />
-      <config projectName="af_bringup" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="actionlib_generate_messages_py" />
-      <config projectName="af_bringup" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="af_bringup" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="af_bringup" targetName="tf_generate_messages_py" />
-      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_cpp" />
-      <config projectName="af_bringup" targetName="clean_test_results" />
-      <config projectName="af_bringup" targetName="run_tests" />
-      <config projectName="af_bringup" targetName="_catkin_empty_exported_target" />
       <config projectName="af_bringup" targetName="roscpp_generate_messages_py" />
-      <config projectName="af_bringup" targetName="af_bringup" />
-      <config projectName="af_bringup" targetName="doxygen" />
-      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="af_bringup_gencfg" />
+      <config projectName="af_bringup" targetName="af_bringup_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="gtest" />
+      <config projectName="af_bringup" targetName="clean_test_results" />
+      <config projectName="af_bringup" targetName="af_serial" />
+      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="af_bringup" targetName="af_bringup_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="std_msgs_generate_messages_py" />
-      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="af_bringup" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="_af_bringup_generate_messages_check_deps_Robot_encode" />
+      <config projectName="af_bringup" targetName="af_bringup" />
+      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="tf_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="gtest_main" />
+      <config projectName="af_bringup" targetName="af_bringup_node" />
+      <config projectName="af_bringup" targetName="tf_generate_messages_py" />
+      <config projectName="af_bringup" targetName="af_bringup_genlisp" />
+      <config projectName="af_bringup" targetName="_af_bringup_generate_messages_check_deps_af_navMsg" />
       <config projectName="af_bringup" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="af_bringup_gencpp" />
+      <config projectName="af_bringup" targetName="download_extra_data" />
+      <config projectName="af_bringup" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="af_bringup_genpy" />
+      <config projectName="af_bringup" targetName="run_tests" />
+      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="std_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="af_bringup_generate_messages" />
+      <config projectName="af_bringup" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="af_bringup" targetName="_catkin_empty_exported_target" />
+      <config projectName="af_bringup" targetName="tests" />
+      <config projectName="af_bringup" targetName="tf_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="af_bringup" targetName="doxygen" />
+      <config projectName="af_bringup" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="af_bringup" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="af_bringup_generate_messages_py" />
       <config projectName="af_bringup" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="af_bringup" targetName="actionlib_generate_messages_py" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration CONFIG_NAME="Debug" GENERATION_OPTIONS="DCATKIN_DEVEL_PREFIX=/home/ros/catkin_test/devel" GENERATION_DIR="$PROJECT_DIR$/../../build" />
+      <configuration CONFIG_NAME="Debug" GENERATION_DIR="$PROJECT_DIR$/../../build" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ab6e04d-d04d-492d-8877-af894f304091" name="Default" comment="" />
+    <list default="true" id="7ab6e04d-d04d-492d-8877-af894f304091" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/../../Clion_build/" />
@@ -86,6 +88,9 @@
   <component name="FileEditorManager">
     <leaf />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -101,10 +106,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="234" />
-    <option name="y" value="68" />
-    <option name="width" value="917" />
-    <option name="height" value="998" />
+    <option name="x" value="1920" />
+    <option name="y" value="-4" />
+    <option name="width" value="1080" />
+    <option name="height" value="1924" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -161,71 +166,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="af_bringup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../build/CMakeCache.txt" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RunManager" selected="Application.Build All">
@@ -529,11 +476,13 @@
       <workItem from="1484791073032" duration="1251000" />
       <workItem from="1484792584613" duration="202000" />
       <workItem from="1484876476625" duration="29000" />
+      <workItem from="1488441006383" duration="26000" />
+      <workItem from="1488448018801" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2640000" />
+    <option name="totallyTimeSpent" value="2681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,15 +494,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="234" y="68" width="917" height="998" extended-state="0" />
+    <frame x="1920" y="-4" width="1080" height="1924" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34098738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6160542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30044347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16017798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />

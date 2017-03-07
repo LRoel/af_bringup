@@ -7,7 +7,7 @@
 #define   IMU_ZERO_VALUE 0.5
 #define   PI 3.14159265358979
 //#define   PulseToDistance  PI*0.1524/2000    //单位脉冲数所对应的距离，电机每转动一周所对应的脉冲数为16384
-#define PulseToDistance  PI*0.430/(4000*32) // 32 jiansubi
+#define PulseToDistance  PI*0.430/(16384*32) // 32 jiansubi
 //#define   PulseToDistance  PI*0.420/4096
 
 
