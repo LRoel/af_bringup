@@ -72,8 +72,8 @@ void ActualOdom::cal_motion(double thetaL, double thetaR, double thetaYaw)
 	ROS_INFO("set configure: %f %f", 
             left_fix_, right_fix_);
 
-    m_rotation = thetaYaw;
-	//m_rotation = (r_tran - l_tran)/length_;
+  m_rotation = thetaYaw;
+	//m_rotation = (r_tran - l_tran)/m_length;
 
 	/*if (m_rotation < IMU_ZERO_VALUE)  //若运动量过小，以里程计为准，否则以IMU为准。
 	{

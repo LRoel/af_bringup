@@ -4,7 +4,7 @@
 
   <arg name="gui" default="False" />  
 
-  <param name="robot_description" textfile="$(find af_bringup)/urdf/af_v2_test2.urdf" />  
+  <param name="robot_description" textfile="$(find af_bringup)/urdf/xy.urdf" />  
 
   <param name="use_gui" value="$(arg gui)"/>  
 
